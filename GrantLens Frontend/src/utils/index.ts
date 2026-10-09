@@ -1,5 +1,5 @@
-import { config } from "../services/api";
 import Papa from "papaparse";
+import { config } from "../config";
 export const money = (n: number) =>
   new Intl.NumberFormat("en-IN", {
     style: "currency",
@@ -34,11 +34,23 @@ const mockSchemas: Record<string, string[]> = {
   "applications.csv": ["id", "beneficiary_id", "scheme", "amount"],
   "transactions.csv": ["id", "source", "target", "amount", "date"],
 };
-export const schemas: Record<string,string[]> = config.mode === "mock" ? mockSchemas : {
-  "beneficiaries.csv":"beneficiary_id full_name dob gender phone address district state pincode bank_account_id ifsc_code institution_id registration_date".split(" "),
-  "applications.csv":"application_id beneficiary_id scheme_id academic_year institution_id enrollment_status income_band application_status approved_amount application_date".split(" "),
-  "transactions.csv":"transaction_id timestamp sender_account receiver_account amount transaction_type application_id".split(" "),
-};
+export const schemas: Record<string, string[]> =
+  config.mode === "mock"
+    ? mockSchemas
+    : {
+        "beneficiaries.csv":
+          "beneficiary_id full_name dob gender phone address district state pincode bank_account_id ifsc_code institution_id registration_date".split(
+            " ",
+          ),
+        "applications.csv":
+          "application_id beneficiary_id scheme_id academic_year institution_id enrollment_status income_band application_status approved_amount application_date".split(
+            " ",
+          ),
+        "transactions.csv":
+          "transaction_id timestamp sender_account receiver_account amount transaction_type application_id".split(
+            " ",
+          ),
+      };
 export function validateCsv(text: string, name: string) {
   const parsed = Papa.parse<Record<string, string>>(text, {
     header: true,
@@ -55,7 +67,11 @@ export function validateCsv(text: string, name: string) {
   const seen = new Set<string>();
   parsed.data.forEach((row, i) => {
     for (const col of schemas[name] || [])
-      if (!row[col]?.trim() && !(name === "transactions.csv" && col === "application_id")) errors.push(`Row ${i + 2}: ${col} is required.`);
+      if (
+        !row[col]?.trim() &&
+        !(name === "transactions.csv" && col === "application_id")
+      )
+        errors.push(`Row ${i + 2}: ${col} is required.`);
     if (row.id) {
       if (seen.has(row.id))
         errors.push(`Row ${i + 2}: duplicate id ${row.id}.`);

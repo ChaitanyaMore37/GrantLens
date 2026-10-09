@@ -1,4 +1,4 @@
-> Integration update (2026-10-09): see [parent README](../README.md) and [updated API contract](../UPDATED_API_CONTRACT.md). The historical documentation below describes the original component; API mode is now the frontend default and the supplied dataset needs no regeneration.
+> Integration update (2026-10-09): see [parent README](../README.md) and [updated API contract](../docs/api/UPDATED_API_CONTRACT.md). The historical documentation below describes the original component; API mode is now the frontend default and the supplied dataset needs no regeneration.
 
 # GrantLens backend
 
@@ -44,10 +44,10 @@ API-only flow: `POST /api/v1/demo/seed` with `{"count":10000,"seed":17}`, then `
 - `app/services/risk.py`: explainable rules, per-indicator contributions and overlap suppression.
 - `app/services/pipeline.py`: independent command-line/HTTP orchestration; no ground-truth import.
 - `app/services/evaluation.py`: offline truth-based metrics only.
-- `app/db.py`: SQLAlchemy audit, record and case tables. Normalized records, original evidence, matches, clusters, graph, cycles and scores persist as JSON payloads scoped by audit. Notes and status persist independently of reruns.
-- `app/main.py`, `app/schemas.py`: API, request/response contracts, local CORS and error handling.
+- `app/models.py`: SQLAlchemy audit, record, case and event tables; `app/db.py`: sessions and persistence. Normalized records, original evidence, matches, clusters, graph, cycles and scores persist as JSON payloads scoped by audit. Notes and status persist independently of reruns.
+- `app/main.py`: application composition; `app/api/routes/`: endpoint groups; `app/api/errors.py`: error handling; `app/schemas.py`: typed contracts.
 - `scripts/`: generator, pipeline and benchmark entry points. `tests/`: detection, validation, ground-truth isolation and complete API workflow.
-- `API_CONTRACT.md`, `openapi.json`: frontend integration references.
+- `../docs/api/API_CONTRACT.md`, `openapi.json`: frontend integration references.
 
 The initial SQLite model favors a compact prototype. A PostgreSQL move can reuse the SQLAlchemy models and JSON payloads, but requires a PostgreSQL driver, migrations and appropriate connection configuration. It is not a deployed production architecture.
 
@@ -97,3 +97,7 @@ Timing includes ingestion and forensic processing, excludes generation, database
 ## Remaining prototype limits
 
 No real authentication, distributed job queue, resumable jobs, verified identity merges, full PDF reports, migrations, encrypted storage or XLSX import. Reports are structured JSON. Jobs interrupted by restart are marked Failed and can be rerun. List filtering currently reads audit-scoped JSON records into memory, so database pagination/index optimization is needed beyond this scale. The graph is persisted and loaded as one audit snapshot even though responses are bounded. Dense-block and cycle safeguards can miss relationships. Synthetic exclusive scheme rules are examples, not Indian policy claims. Analysts must verify potentially suspicious records before taking action.
+
+## Structural refactor
+
+Existing commands, database location and service imports remain valid. HTTP handlers moved to seven routers; shared audit lookups and masking live in api/dependencies.py, background execution in services/jobs.py and workspace asset resolution in paths.py. See the [architecture](../docs/architecture/PROJECT_ARCHITECTURE.md). Run `PYTHONHASHSEED=0 .venv/bin/python -m scripts.verify_structure` from this backend directory to compare sample/main outputs and API contracts against the saved pre-refactor baseline.

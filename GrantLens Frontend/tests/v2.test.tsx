@@ -1,17 +1,15 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { MemoryRouter, Routes, Route } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Login, Protected } from "../src/pages/Login";
-import {
-  PriorityQueue,
-  TransactionAnomalies,
-  AnalysisHistory,
-  AuditTrail,
-} from "../src/pages/Intelligence";
-import { v2 } from "../src/services/v2";
 import type { ReactNode } from "react";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { AnalysisHistory } from "../src/pages/AnalysisHistory";
+import { AuditTrail } from "../src/pages/AuditTrail";
+import { Login, Protected } from "../src/pages/Login";
+import { PriorityQueue } from "../src/pages/PriorityQueue";
+import { TransactionAnomalies } from "../src/pages/TransactionAnomalies";
+import { v2 } from "../src/services/api/v2";
 function mount(node: ReactNode) {
   return render(
     <QueryClientProvider
@@ -52,25 +50,23 @@ describe("V2 workflow", () => {
     ).toBeInTheDocument();
   });
   it("requests server pages and filters instead of a whole audit snapshot", async () => {
-    const spy = vi
-      .spyOn(v2, "queue")
-      .mockResolvedValue({
-        items: [
-          {
-            beneficiary_id: "B1",
-            full_name: "Sample person",
-            district: "Pune",
-            institution_id: "I1",
-            risk_score: 80,
-            risk_level: "Critical",
-            bank_account_id: "••••1234",
-            evidence: [],
-          },
-        ],
-        total: 40,
-        offset: 0,
-        limit: 25,
-      });
+    const spy = vi.spyOn(v2, "queue").mockResolvedValue({
+      items: [
+        {
+          beneficiary_id: "B1",
+          full_name: "Sample person",
+          district: "Pune",
+          institution_id: "I1",
+          risk_score: 80,
+          risk_level: "Critical",
+          bank_account_id: "••••1234",
+          evidence: [],
+        },
+      ],
+      total: 40,
+      offset: 0,
+      limit: 25,
+    });
     const u = userEvent.setup();
     mount(<PriorityQueue />);
     await screen.findByRole("button", { name: "Sample person" });

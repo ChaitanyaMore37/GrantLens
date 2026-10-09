@@ -78,16 +78,17 @@ def test_explicit_mapping_preserves_source_and_rejects_unsafe_files(client,tmp_p
 
 
 def test_failed_job_recovery_and_restart_event(client,monkeypatch):
-    from app import main,db
+    from app import db
+    from app.services import jobs
     aid=client.post('/api/v1/demo/seed',json={'count':300}).json()['audit_id']
-    original=main.run
+    original=jobs.run
     def broken(*args,**kwargs): raise RuntimeError('Deliberate test failure')
-    monkeypatch.setattr(main,'run',broken)
+    monkeypatch.setattr(jobs,'run',broken)
     client.post(f'/api/v1/audits/{aid}/run')
     failed=client.get(f'/api/v1/audits/{aid}/status').json()
     assert failed['status']=='Failed' and failed['summary']['completed_at']
     assert 'Deliberate test failure' not in failed['summary']['error']
-    monkeypatch.setattr(main,'run',original)
+    monkeypatch.setattr(jobs,'run',original)
     client.post(f'/api/v1/audits/{aid}/run')
     assert client.get(f'/api/v1/audits/{aid}/status').json()['status']=='Completed'
     with db.Session.begin() as s: s.get(db.Audit,aid).status='Running'

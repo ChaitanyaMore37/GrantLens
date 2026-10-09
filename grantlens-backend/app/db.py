@@ -2,54 +2,14 @@ import os
 from pathlib import Path
 from datetime import datetime, timezone
 from uuid import uuid4
-from sqlalchemy import create_engine, String, JSON, select, delete, Index
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
+from sqlalchemy import create_engine, select, delete
+from sqlalchemy.orm import sessionmaker
+from app.models import Base, Audit, Record, Case, Event
 
 DATA=Path(os.getenv('GRANTLENS_DATA','data'))
 DATA.mkdir(parents=True,exist_ok=True)
 engine=create_engine(os.getenv('GRANTLENS_DB',f'sqlite:///{DATA / "grantlens.db"}'),connect_args={'check_same_thread':False} if os.getenv('GRANTLENS_DB','sqlite:').startswith('sqlite:') else {})
 Session=sessionmaker(engine)
-
-
-class Base(DeclarativeBase):
-    pass
-
-
-class Audit(Base):
-    __tablename__='audits'
-    id: Mapped[str]=mapped_column(String,primary_key=True)
-    status: Mapped[str]=mapped_column(String,default='Ready')
-    directory: Mapped[str]=mapped_column(String)
-    created_at: Mapped[str]=mapped_column(String)
-    summary: Mapped[dict]=mapped_column(JSON,default=dict)
-
-
-class Record(Base):
-    __tablename__='records'
-    audit_id: Mapped[str]=mapped_column(String,primary_key=True)
-    kind: Mapped[str]=mapped_column(String,primary_key=True)
-    id: Mapped[str]=mapped_column(String,primary_key=True)
-    payload: Mapped[dict]=mapped_column(JSON)
-
-
-class Case(Base):
-    __tablename__='cases'
-    audit_id: Mapped[str]=mapped_column(String,primary_key=True)
-    id: Mapped[str]=mapped_column(String,primary_key=True)
-    status: Mapped[str]=mapped_column(String,default='Needs Review')
-    notes: Mapped[list]=mapped_column(JSON,default=list)
-    payload: Mapped[dict]=mapped_column(JSON)
-
-
-class Event(Base):
-    __tablename__='audit_events'
-    id: Mapped[str]=mapped_column(String,primary_key=True)
-    audit_id: Mapped[str]=mapped_column(String,index=True)
-    created_at: Mapped[str]=mapped_column(String,index=True)
-    event_type: Mapped[str]=mapped_column(String,index=True)
-    case_id: Mapped[str | None]=mapped_column(String,nullable=True)
-    actor: Mapped[str]=mapped_column(String,default='Local demo auditor')
-    summary: Mapped[str]=mapped_column(String)
 
 
 def event(aid,kind,summary,case_id=None,session=None):
@@ -58,7 +18,7 @@ def event(aid,kind,summary,case_id=None,session=None):
     else:
         with Session.begin() as s: s.add(row)
 
-Index('ix_record_risk',Record.audit_id,Record.kind,Record.payload['risk_score'].as_integer(),Record.id)
+
 
 
 def initialize():

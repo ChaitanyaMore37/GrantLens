@@ -1,0 +1,33 @@
+
+> grantlens-frontend@1.0.0 test
+> vitest run
+
+
+ RUN  v5.0.3 /Users/chaitanyamore/Documents/ChatGPT/GrantLens Frontend
+
+
+ Test Files  4 passed (4)
+      Tests  28 passed (28)
+   Start at  00:03:00
+   Duration  1.74s (environment 39%, tests 32%, import 10%, transform 10%, setup 9%)
+
+
+> grantlens-frontend@1.0.0 typecheck
+> tsc --noEmit
+
+
+> grantlens-frontend@1.0.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 2255 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                      0.71 kB │ gzip:   0.38 kB
+dist/assets/index-NCuvIETT.css      47.69 kB │ gzip:  11.27 kB
+dist/assets/framework-DbvLWIGu.js   87.43 kB │ gzip:  28.39 kB
+dist/assets/index-CZ4SXjge.js      335.18 kB │ gzip: 103.80 kB
+dist/assets/charts-DibZZlbW.js     417.76 kB │ gzip: 119.42 kB
+dist/assets/graph-BB4DxJjf.js      443.04 kB │ gzip: 141.36 kB
+✓ built in 1.67s

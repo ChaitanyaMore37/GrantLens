@@ -64,7 +64,7 @@ npm run build
 python3 -m unittest discover -s tests -v
 ```
 
-For isolated UI development only, set `VITE_DATA_SOURCE=mock` in the frontend `.env` and restart Vite. API errors never fall back to fixtures. Existing component documentation describes the pre-integration versions; this README and `UPDATED_API_CONTRACT.md` describe the integrated application.
+For isolated UI development only, set `VITE_DATA_SOURCE=mock` in the frontend `.env` and restart Vite. API errors never fall back to fixtures. Existing component documentation describes the pre-integration versions; this README and `docs/api/API_CONTRACT.md` describe the current application; UPDATED_API_CONTRACT.md remains the V1 reference.
 
 ## Troubleshooting
 
@@ -75,7 +75,7 @@ For isolated UI development only, set `VITE_DATA_SOURCE=mock` in the frontend `.
 - **Slow first load:** this local adapter retrieves a complete result snapshot for client-side registry filtering; investigations use paginated requests. This is verified at 10,000 beneficiaries, not production scale.
 - **Missing CL-017 route:** supplied CL-017 is an offline evaluation label. The engine independently discovered `CLU-af7bca6c2c32` in the main dataset (16 members, ₹8,20,000). The UI uses computed IDs and does not feed evaluation labels into detection.
 
-See `INTEGRATION_REPORT.md`, `FEATURE_GAP_REPORT.md`, and `TEST_REPORT.md` for implementation details and measured limitations.
+See `docs/integration/INTEGRATION_REPORT.md`, `docs/integration/FEATURE_GAP_REPORT.md`, and `docs/testing/TEST_REPORT.md` for implementation details and measured limitations.
 
 
 ## V2 auditor workflow
@@ -84,8 +84,39 @@ Settings → Initialize supplied dataset can create/reuse a sample or main audit
 
 Priority Review Queue and the beneficiary directory use server pagination and compound filters. Open a beneficiary for source references, applications, account transactions, identity candidates, evidence and related case/graph links. Transaction Anomalies includes zero-contribution contextual cycles as well as review findings. Investigation assignment and verification actions are demo-only, internal workflow changes. Reports → Generate and archive report persists a JSON snapshot; download its JSON or CSV case register. Browser print is an unsigned local output.
 
-Detection Evaluation shows recorded offline synthetic results. On the 10,000-record regression set, V2 reduced 2,074 false positives to zero with 99.36% recall; seven positives remain missed. This does not establish real-world accuracy. The legacy backend collector fixture loses four low-proportion records. See DETECTION_EVALUATION_REPORT.md.
+Detection Evaluation shows recorded offline synthetic results. On the 10,000-record regression set, V2 reduced 2,074 false positives to zero with 99.36% recall; seven positives remain missed. This does not establish real-world accuracy. The legacy backend collector fixture loses four low-proportion records. See docs/testing/DETECTION_EVALUATION_REPORT.md.
 
 V2 adds tables/indexes automatically at startup without replacing existing audits. Old V1 results remain unchanged; initialize a new supplied audit or deliberately rerun through the API for V2 materialized metadata. Use a single backend worker. Interrupted jobs are marked Failed and can be retried; there is no durable queue or cancellation. Optional XLSX/PDF/OCR ingestion is not implemented.
 
-Upgrade details: UPGRADE_REPORT.md, FEATURE_PARITY_MATRIX.md, API_CONTRACT.md, DETECTION_EVALUATION_REPORT.md, PERFORMANCE_REPORT.md and TEST_REPORT.md. Executed test/evaluation evidence is in v2-results/. The original integration reports remain historical baselines.
+Upgrade details: docs/integration/UPGRADE_REPORT.md, docs/integration/FEATURE_PARITY_MATRIX.md, docs/api/API_CONTRACT.md, docs/testing/DETECTION_EVALUATION_REPORT.md, docs/testing/PERFORMANCE_REPORT.md and docs/testing/TEST_REPORT.md. Executed test/evaluation evidence is in v2-results/. The original integration reports remain historical baselines.
+
+## Reorganized source layout
+
+- `GrantLens Frontend/src/app/`: composition, router and providers.
+- `GrantLens Frontend/src/pages/`: one directory per implemented page.
+- `GrantLens Frontend/src/components/`: common, layout, tables and graphs.
+- `GrantLens Frontend/src/services/api/`: HTTP client, contracts, adapters and V2 endpoints; `services/mock/`: explicit fixtures.
+- `grantlens-backend/app/api/`: routers, request helpers and errors; `models.py`: table definitions; `db.py`: sessions and persistence.
+- `grantlens-backend/app/services/`: unchanged forensic modules plus the extracted job runner.
+- `Synthetic Scholarship Dataset/grantlens-dataset/`: unchanged dataset release.
+- `docs/`: architecture, API, dataset, integration and testing documentation.
+- `integration-results/`, `v2-results/`, `refactor-results/`: historical and current executed evidence.
+
+See [architecture](docs/architecture/PROJECT_ARCHITECTURE.md), [module map](docs/architecture/MODULE_MAP.md), [actual source tree](FINAL_FOLDER_TREE.md), [structure audit](STRUCTURE_AUDIT.md) and [refactor report](REFACTOR_REPORT.md).
+
+Existing startup commands and ports above are unchanged. With dependencies already installed, use two terminals from the parent directory:
+
+```sh
+(cd grantlens-backend && .venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000)
+```
+
+```sh
+(cd "GrantLens Frontend" && npm run dev -- --port 5173)
+```
+
+Refactor regression (reads supplied sample/main, never persists or regenerates them):
+
+```sh
+(cd grantlens-backend && PYTHONHASHSEED=0 .venv/bin/python -m scripts.verify_structure)
+(cd "GrantLens Frontend" && npm test && npm run typecheck && npm run build)
+```

@@ -1,0 +1,8 @@
+{
+  "pipeline_hashes": {
+    "sample": "21a82ce131630a4cee63605c3d3bc5a2c9f5e45da7551932e054be5cb208de0c",
+    "main": "71f529b03015e592d4de429496ae7b65ac3b30a00c73bfae9d79b1679f67d8cf"
+  },
+  "openapi_unchanged": true,
+  "protected_files_unchanged": 88
+}

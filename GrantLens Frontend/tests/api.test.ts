@@ -1,14 +1,17 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
-import { mockApi, httpApi, selectAudit } from "../src/services/api";
+import { readFileSync } from "node:fs";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { httpApi, mockApi, selectAudit } from "../src/services/api";
 import {
   beneficiaries,
+  cases,
   clusters,
   transactions,
-  cases,
-} from "../src/services/data";
+} from "../src/services/mock/data";
 import { validateCsv } from "../src/utils";
-import { readFileSync } from "node:fs";
-afterEach(() => {vi.unstubAllGlobals(); localStorage.clear();});
+afterEach(() => {
+  vi.unstubAllGlobals();
+  localStorage.clear();
+});
 describe("deterministic mock API and evidence consistency", () => {
   it("derives dashboard totals from the same records as case views", async () => {
     const s = await mockApi.getAuditSummary();
@@ -181,7 +184,13 @@ describe("HTTP adapter failures", () => {
     selectAudit("test-audit");
     vi.stubGlobal(
       "fetch",
-      vi.fn().mockResolvedValue({ ok: false, status: 503, json: async()=>({error:{message:"Unavailable"}}) }),
+      vi
+        .fn()
+        .mockResolvedValue({
+          ok: false,
+          status: 503,
+          json: async () => ({ error: { message: "Unavailable" } }),
+        }),
     );
     await expect(httpApi.getClusters()).rejects.toThrow("503");
   });
@@ -194,34 +203,104 @@ describe("HTTP adapter failures", () => {
     await expect(httpApi.getClusters()).rejects.toThrow("empty response");
     vi.stubGlobal(
       "fetch",
-      vi.fn().mockResolvedValue({ ok: true, json: async () => ({clusters:[],beneficiaries:[],applications:[],transactions:[]}) }),
+      vi
+        .fn()
+        .mockResolvedValue({
+          ok: true,
+          json: async () => ({
+            clusters: [],
+            beneficiaries: [],
+            applications: [],
+            transactions: [],
+          }),
+        }),
     );
     expect(await httpApi.getClusters()).toEqual([]);
   });
 });
 
-describe("integrated HTTP contract",()=>{
-  it("scopes data and graph calls to the selected audit",async()=>{
+describe("integrated HTTP contract", () => {
+  it("scopes data and graph calls to the selected audit", async () => {
     selectAudit("audit-A");
-    const fetcher=vi.fn().mockResolvedValueOnce({ok:true,json:async()=>({beneficiaries:[],applications:[],transactions:[],clusters:[]})}).mockResolvedValueOnce({ok:true,json:async()=>({nodes:[{data:{id:"B",type:"BENEFICIARY",label:"Record"}},{data:{id:"A",type:"BANK_ACCOUNT",label:"••••1234"}}],edges:[{data:{id:"E",source:"B",target:"A",relationship:"USES_ACCOUNT",source_record_ids:["B"]}}],truncated:true})});
-    vi.stubGlobal("fetch",fetcher);
+    const fetcher = vi
+      .fn()
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          beneficiaries: [],
+          applications: [],
+          transactions: [],
+          clusters: [],
+        }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          nodes: [
+            { data: { id: "B", type: "BENEFICIARY", label: "Record" } },
+            { data: { id: "A", type: "BANK_ACCOUNT", label: "••••1234" } },
+          ],
+          edges: [
+            {
+              data: {
+                id: "E",
+                source: "B",
+                target: "A",
+                relationship: "USES_ACCOUNT",
+                source_record_ids: ["B"],
+              },
+            },
+          ],
+          truncated: true,
+        }),
+      });
+    vi.stubGlobal("fetch", fetcher);
     expect(await httpApi.getBeneficiaries()).toEqual([]);
-    const g=await httpApi.getClusterGraph("CLU-real");
+    const g = await httpApi.getClusterGraph("CLU-real");
     expect(g.nodes[1].data.type).toBe("account");
     expect(g.edges[0].data.records).toEqual(["B"]);
     expect(g.truncated).toBe(true);
-    expect(fetcher.mock.calls.every(([url])=>String(url).includes("audit_id=audit-A"))).toBe(true);
+    expect(
+      fetcher.mock.calls.every(([url]) =>
+        String(url).includes("audit_id=audit-A"),
+      ),
+    ).toBe(true);
     selectAudit("audit-B");
-    fetcher.mockResolvedValueOnce({ok:true,json:async()=>({beneficiaries:[],applications:[],transactions:[],clusters:[]})});
+    fetcher.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        beneficiaries: [],
+        applications: [],
+        transactions: [],
+        clusters: [],
+      }),
+    });
     await httpApi.getBeneficiaries();
-    expect(String(fetcher.mock.calls.at(-1)?.[0])).toContain("audit_id=audit-B");
+    expect(String(fetcher.mock.calls.at(-1)?.[0])).toContain(
+      "audit_id=audit-B",
+    );
   });
-  it("maps case statuses to backend values without changing the score",async()=>{
+  it("maps case statuses to backend values without changing the score", async () => {
     selectAudit("audit-C");
-    const fetcher=vi.fn().mockResolvedValue({ok:true,json:async()=>({case_id:"CLU-real",status:"In Investigation",notes:[{text:"check",created_at:"2026-10-09"}]})});
-    vi.stubGlobal("fetch",fetcher);
-    const c=await httpApi.updateInvestigation("CLU-real",{status:"IN_INVESTIGATION",note:"check"});
+    const fetcher = vi
+      .fn()
+      .mockResolvedValue({
+        ok: true,
+        json: async () => ({
+          case_id: "CLU-real",
+          status: "In Investigation",
+          notes: [{ text: "check", created_at: "2026-10-09" }],
+        }),
+      });
+    vi.stubGlobal("fetch", fetcher);
+    const c = await httpApi.updateInvestigation("CLU-real", {
+      status: "IN_INVESTIGATION",
+      note: "check",
+    });
     expect(c.status).toBe("IN_INVESTIGATION");
-    expect(JSON.parse(fetcher.mock.calls[0][1].body)).toEqual({status:"In Investigation",note:"check"});
+    expect(JSON.parse(fetcher.mock.calls[0][1].body)).toEqual({
+      status: "In Investigation",
+      note: "check",
+    });
   });
 });

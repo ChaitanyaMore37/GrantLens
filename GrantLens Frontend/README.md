@@ -1,4 +1,4 @@
-> Integration update (2026-10-09): see [parent README](../README.md) and [updated API contract](../UPDATED_API_CONTRACT.md). The historical documentation below describes the original component; API mode is now the frontend default and the supplied dataset needs no regeneration.
+> Integration update (2026-10-09): see [parent README](../README.md) and [updated API contract](../docs/api/UPDATED_API_CONTRACT.md). The historical documentation below describes the original component; API mode is now the frontend default and the supplied dataset needs no regeneration.
 
 # GrantLens
 
@@ -51,8 +51,8 @@ The production build is written to `dist/`. Production hosting must rewrite appl
 ## Project structure
 
 - `src/types/`: domain models and graph contract
-- `src/services/data.ts`: single deterministic fixture source
-- `src/services/api.ts`: typed API interface, mock adapter, provisional HTTP adapter and central configuration
+- `src/services/mock/data.ts`: single deterministic fixture source
+- `src/services/api/index.ts`: typed API interface, mock adapter, provisional HTTP adapter and central configuration
 - `src/components/`: shared shell, accessible controls, cluster table and Cytoscape graph/inspector
 - `src/pages/`: nine workflow screens
 - `src/utils/`: currency/status formatting, CSV schema validation and file downloads
@@ -68,4 +68,8 @@ Mock notes, statuses, and audit jobs persist across client-side navigation durin
 
 Graphs and risk evidence are fixed demonstration fixtures. The frontend does not implement entity resolution, identity matching, Louvain detection, centrality, cycle detection or fraud scoring. Graph traversal only highlights existing supplied edges. Scores are review-priority indices, not probabilities of fraud.
 
-The HTTP adapter is a scaffold pending the real `API_CONTRACT.md`; it is not a verified FastAPI integration. See `FRONTEND_INTEGRATION.md` and `MOCK_DATA_REFERENCE.md`. Verification details are recorded in `TEST_RESULTS.md`.
+The HTTP adapter is a scaffold pending the real `../docs/api/API_CONTRACT.md`; it is not a verified FastAPI integration. See `FRONTEND_INTEGRATION.md` and `MOCK_DATA_REFERENCE.md`. Verification details are recorded in `TEST_RESULTS.md`.
+
+## Structural refactor
+
+Application composition is in src/app/; page directories have index.tsx entry points. Shared components are grouped by common/layout/tables/graphs. services/api/client.ts owns HTTP handling, contracts.ts owns the Api interface, services/mock/api.ts owns mock behavior, and config/index.ts owns Vite settings. Global styles moved unchanged to styles/global.css. src/main.tsx remains the Vite entry. See the [module map](../docs/architecture/MODULE_MAP.md).

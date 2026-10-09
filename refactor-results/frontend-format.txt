@@ -1,0 +1,39 @@
+src/app/App.tsx 15ms
+src/app/providers/AppProviders.tsx 4ms
+src/app/router/AppRoutes.tsx 6ms
+src/components/common/Common.tsx 18ms
+src/components/graphs/GraphView.tsx 35ms
+src/components/layout/Layout.tsx 9ms
+src/components/tables/ClusterTable.tsx 11ms
+src/components/tables/ServerClusterTable.tsx 5ms
+src/config/index.ts 1ms (unchanged)
+src/main.tsx 1ms (unchanged)
+src/pages/AnalysisHistory/index.tsx 4ms
+src/pages/AuditTrail/index.tsx 2ms
+src/pages/Beneficiaries/index.tsx 9ms
+src/pages/ClusterDetail/index.tsx 9ms
+src/pages/DetectionEvaluation/index.tsx 4ms
+src/pages/Investigations/index.tsx 6ms
+src/pages/Login/index.tsx 2ms
+src/pages/NetworkExplorer/index.tsx 1ms
+src/pages/NewAudit/index.tsx 14ms
+src/pages/Overview/index.tsx 8ms
+src/pages/PriorityQueue/index.tsx 8ms
+src/pages/Reports/index.tsx 9ms
+src/pages/Settings/index.tsx 4ms
+src/pages/TransactionAnomalies/index.tsx 3ms
+src/services/api/client.ts 3ms (unchanged)
+src/services/api/contracts.ts 1ms
+src/services/api/index.ts 11ms
+src/services/api/v2.ts 3ms
+src/services/mock/api.ts 9ms
+src/services/mock/data.ts 9ms
+src/styles/global.css 76ms
+src/types/index.ts 2ms (unchanged)
+src/utils/index.ts 3ms
+src/utils/requireItem.ts 0ms (unchanged)
+tests/api.test.ts 9ms
+tests/components.test.tsx 4ms
+tests/graph.test.tsx 4ms
+tests/setup.ts 1ms (unchanged)
+tests/v2.test.tsx 4ms

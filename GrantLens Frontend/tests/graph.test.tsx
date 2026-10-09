@@ -1,9 +1,9 @@
-import { describe, it, expect, vi } from "vitest";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { CytoscapeOptions } from "cytoscape";
-import { GraphView } from "../src/components/GraphView";
+import { describe, expect, it, vi } from "vitest";
+import { GraphView } from "../src/components/graphs/GraphView";
 import { mockApi } from "../src/services/api";
 
 // Exercise the real Cytoscape graph engine without jsdom's unavailable canvas renderer.

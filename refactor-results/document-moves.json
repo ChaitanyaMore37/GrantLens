@@ -1,0 +1,11 @@
+{
+  "INTEGRATION_REPORT.md": "docs/integration/INTEGRATION_REPORT.md",
+  "FEATURE_GAP_REPORT.md": "docs/integration/FEATURE_GAP_REPORT.md",
+  "UPGRADE_REPORT.md": "docs/integration/UPGRADE_REPORT.md",
+  "FEATURE_PARITY_MATRIX.md": "docs/integration/FEATURE_PARITY_MATRIX.md",
+  "API_CONTRACT.md": "docs/api/API_CONTRACT.md",
+  "UPDATED_API_CONTRACT.md": "docs/api/UPDATED_API_CONTRACT.md",
+  "TEST_REPORT.md": "docs/testing/TEST_REPORT.md",
+  "DETECTION_EVALUATION_REPORT.md": "docs/testing/DETECTION_EVALUATION_REPORT.md",
+  "PERFORMANCE_REPORT.md": "docs/testing/PERFORMANCE_REPORT.md"
+}

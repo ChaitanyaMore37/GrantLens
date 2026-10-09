@@ -1,13 +1,13 @@
-import { describe, it, expect, vi } from "vitest";
-import { render, screen, within, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { MemoryRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ClusterTable } from "../src/components/ClusterTable";
-import { Layout } from "../src/components/Layout";
-import { NewAudit } from "../src/pages/NewAudit";
-import { DataState, ToastProvider } from "../src/components/Common";
+import { render, screen, waitFor, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import type { ReactNode } from "react";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
+import { describe, expect, it, vi } from "vitest";
+import { DataState, ToastProvider } from "../src/components/common/Common";
+import { Layout } from "../src/components/layout/Layout";
+import { ClusterTable } from "../src/components/tables/ClusterTable";
+import { NewAudit } from "../src/pages/NewAudit";
 function mount(node: ReactNode) {
   const client = new QueryClient({
     defaultOptions: { queries: { retry: false } },
