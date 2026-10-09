@@ -1,0 +1,21 @@
+# Local dependencies and build output
+node_modules/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.tsbuildinfo
+GrantLens Frontend/dist/
+
+# Local configuration and OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+
+# Generated audit state (the supplied dataset remains tracked separately)
+grantlens-backend/data/audits/
+grantlens-backend/data/*.db
+grantlens-backend/data/*.db-*

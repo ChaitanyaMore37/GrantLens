@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "files": [
+    "main/applications.csv",
+    "main/beneficiaries.csv",
+    "main/reference/account_authorizations.csv",
+    "main/reference/accounts.csv",
+    "main/reference/institutions.csv",
+    "main/reference/scheme_rules.csv",
+    "main/transactions.csv"
+  ]
+}

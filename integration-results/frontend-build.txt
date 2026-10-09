@@ -1,0 +1,16 @@
+
+> grantlens-frontend@1.0.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 2241 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                      0.71 kB │ gzip:   0.37 kB
+dist/assets/index-Bz857191.css      45.38 kB │ gzip:  10.77 kB
+dist/assets/framework-C62NhMfk.js   86.76 kB │ gzip:  28.18 kB
+dist/assets/index-DkFL4a38.js      318.55 kB │ gzip:  99.12 kB
+dist/assets/charts-DksnUu0p.js     403.07 kB │ gzip: 115.84 kB
+dist/assets/graph-BB4DxJjf.js      443.04 kB │ gzip: 141.36 kB
+✓ built in 1.63s

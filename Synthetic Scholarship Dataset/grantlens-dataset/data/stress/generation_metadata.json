@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "generator_version": "1.0.0",
+  "config": {
+    "beneficiaries": 50000,
+    "seed": 42,
+    "disbursements_per_beneficiary": 1.35
+  },
+  "as_of": "2026-06-30",
+  "timezone": "Asia/Kolkata",
+  "fictional": true,
+  "academic_years": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "row_counts": {
+    "main/beneficiaries.csv": 50000,
+    "main/applications.csv": 72254,
+    "main/transactions.csv": 79155,
+    "main/reference/institutions.csv": 96,
+    "main/reference/scheme_rules.csv": 6,
+    "main/reference/accounts.csv": 47607,
+    "main/reference/account_authorizations.csv": 300,
+    "ground_truth/ground_truth.csv": 50000,
+    "ground_truth/ground_truth_pairs.csv": 54806,
+    "ground_truth/fraud_rings.csv": 901,
+    "ground_truth/scenario_memberships.csv": 5480,
+    "ground_truth/lookalike_cases.csv": 1500,
+    "ground_truth/intentional_anomalies.csv": 569
+  },
+  "unique_actual_people": 49392,
+  "pair_sampling": "All positive identity pairs, all pairs within small explicit legitimate controls, and n attempted random pairs. Not an exhaustive negative universe.",
+  "files_sha256": {
+    "main/beneficiaries.csv": "c169c4ce40f9ddf45c9163846f35119e04841d7bea6374f37db9ad59508b04ac",
+    "main/applications.csv": "49a01193c2a697f9ecb397e3988f6e51616ca5cd65bb9ba84f3c6776e362490e",
+    "main/transactions.csv": "6fb44802077ea5d18128db70f9b51efbd2f4160ed3fa4fd25c98c417136f11c0",
+    "main/reference/institutions.csv": "6225c2c28446e8dc5c396e6f93c5b84c74d5e962ae16e3c0e865b819701bd557",
+    "main/reference/scheme_rules.csv": "181b040b9ff78cc00f08d33860e7d6659de379730affb7befa84e7c6a2cc0dc1",
+    "main/reference/accounts.csv": "3b30a860202865e402691552b08352317db73bdfaa33f47e5b5c902cd0dfe7a6",
+    "main/reference/account_authorizations.csv": "46370ae4a34c1a4af119c13dc5558d53feaafa667d99fc6c015b3321e17692f4",
+    "ground_truth/ground_truth.csv": "958547d4429d783f7e86e3dda3471976362e467e03aaca752c202f6520f468c4",
+    "ground_truth/ground_truth_pairs.csv": "f7287c0875c26f4e664bffa0e08ee444aef4dee3a5cbce2ce7facb33236725c3",
+    "ground_truth/fraud_rings.csv": "506ca97d2b95d767a3753a9654d886e044f723f46f8ab12db91b802c63a30106",
+    "ground_truth/scenario_memberships.csv": "a0c7ed160ab851254e2a3a264e23858e0179a26f24b0e66790d294679df6fe9b",
+    "ground_truth/lookalike_cases.csv": "3ba5c0f0d201bb4e65d49f5ef5ff535d51544c2a704b171abcd839f6b98ae851",
+    "ground_truth/intentional_anomalies.csv": "ac5233302aee93268b41e5de613177b44cf7887e59d771191d9a37ad000343cb"
+  }
+}

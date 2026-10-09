@@ -1,0 +1,1001 @@
+record_id,actual_person_id,scenario_type,is_injected_suspicious,fraud_ring_id,description
+BEN-000946,PERSON-000688,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000802,PERSON-000663,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000601,PERSON-000409,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000282,PERSON-000299,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000979,PERSON-000997,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000797,PERSON-000552,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000448,PERSON-000031,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000408,PERSON-000230,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000441,PERSON-000924,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000089,PERSON-000309,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000890,PERSON-000336,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000772,PERSON-000029,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000877,PERSON-000797,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000012,PERSON-000484,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000778,PERSON-000812,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000919,PERSON-000733,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000576,PERSON-000541,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000977,PERSON-000758,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000333,PERSON-000323,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000978,PERSON-000102,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000291,PERSON-000850,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000828,PERSON-000929,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000314,PERSON-000190,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000125,PERSON-000606,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000843,PERSON-000098,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000582,PERSON-000569,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000591,PERSON-000058,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000001,PERSON-000330,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000907,PERSON-000857,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000750,PERSON-000396,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000338,PERSON-000867,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000301,PERSON-000027,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000734,PERSON-000118,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000570,PERSON-000702,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000596,PERSON-000463,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000035,PERSON-000013,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000496,PERSON-000373,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000264,PERSON-000516,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000970,PERSON-000275,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000971,PERSON-000342,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000277,PERSON-000905,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000618,PERSON-000989,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000148,PERSON-000831,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000600,PERSON-000806,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000803,PERSON-000137,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000630,PERSON-000575,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000519,PERSON-000111,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000320,PERSON-000159,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000652,PERSON-000213,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000425,PERSON-000070,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000788,PERSON-000521,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000914,PERSON-000465,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000491,PERSON-000927,IDENTITY_CLONING,1,RING-0004,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000996,PERSON-000369,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000172,PERSON-000080,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000468,PERSON-000314,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000137,PERSON-000542,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000193,PERSON-000086,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000518,PERSON-000678,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000513,PERSON-000744,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000967,PERSON-000262,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000905,PERSON-000816,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000260,PERSON-000868,LEGIT_IDENTICAL_NAME,0,,"Same full name, distinct birth dates, contacts and accounts."
+BEN-000226,PERSON-000931,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000969,PERSON-000264,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000809,PERSON-000815,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000020,PERSON-000586,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000940,PERSON-000469,IDENTITY_CLONING,1,RING-0002,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000421,PERSON-000175,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000680,PERSON-000036,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000211,PERSON-000439,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000934,PERSON-000977,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000456,PERSON-000528,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000212,PERSON-000410,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000932,PERSON-000283,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000568,PERSON-000642,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000609,PERSON-000514,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000578,PERSON-000907,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000074,PERSON-000108,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000315,PERSON-000421,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000848,PERSON-000100,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000302,PERSON-000629,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000351,PERSON-000872,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000078,PERSON-000076,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000938,PERSON-000517,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000507,PERSON-000887,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000832,PERSON-000347,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000237,PERSON-000981,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000910,PERSON-000123,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000308,PERSON-000631,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000018,PERSON-000210,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000521,PERSON-000374,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000126,PERSON-000116,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000500,PERSON-000019,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000084,PERSON-000169,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000830,PERSON-000010,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000737,PERSON-000003,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000337,PERSON-000870,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000689,PERSON-000805,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000653,PERSON-000608,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000036,PERSON-000656,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000672,PERSON-000469,IDENTITY_CLONING,1,RING-0002,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000807,PERSON-000079,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000376,PERSON-000572,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000104,PERSON-000668,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000265,PERSON-000183,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000959,PERSON-000117,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000895,PERSON-000496,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000729,PERSON-000101,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000422,PERSON-000632,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000063,PERSON-000510,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000041,PERSON-000823,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000080,PERSON-000884,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000293,PERSON-000282,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000993,PERSON-000274,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0011,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000068,PERSON-000424,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000361,PERSON-000897,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000032,PERSON-000538,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000465,PERSON-000186,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0011,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000202,PERSON-000920,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000460,PERSON-000273,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000149,PERSON-000581,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000167,PERSON-000834,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000352,PERSON-000430,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000945,PERSON-000253,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000070,PERSON-000233,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000015,PERSON-000434,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000599,PERSON-000125,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000464,PERSON-000087,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000138,PERSON-000877,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000965,PERSON-000944,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000164,PERSON-000610,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000039,PERSON-000350,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000092,PERSON-000579,LEGIT_COMPATIBLE_SCHEMES,0,,Tuition and study-material support are permitted together in the same year.
+BEN-000665,PERSON-000817,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000253,PERSON-000563,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000968,PERSON-000037,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000732,PERSON-000830,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000839,PERSON-000046,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000559,PERSON-000073,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000956,PERSON-000971,IDENTITY_CLONING,1,RING-0003,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000410,PERSON-000697,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000007,PERSON-000277,IDENTITY_CLONING,1,RING-0005,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000759,PERSON-000881,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000650,PERSON-000802,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000157,PERSON-000096,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000064,PERSON-000945,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000079,PERSON-000829,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000439,PERSON-000030,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000384,PERSON-000694,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000190,PERSON-000766,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000492,PERSON-000979,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000526,PERSON-000869,LEGIT_GUARDIAN_ACCOUNT,0,,Two distinct students have recorded guardian payout authorization.
+BEN-000256,PERSON-000162,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000087,PERSON-000752,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000139,PERSON-000441,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000882,PERSON-000246,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000021,PERSON-000714,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000861,PERSON-000919,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000637,PERSON-000258,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000851,PERSON-000095,LEGIT_COMPATIBLE_SCHEMES,0,,Tuition and study-material support are permitted together in the same year.
+BEN-000554,PERSON-000435,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0011,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000593,PERSON-000986,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000632,PERSON-000524,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000505,PERSON-000308,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000990,PERSON-000798,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000124,PERSON-000666,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000428,PERSON-000826,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000921,PERSON-000025,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000343,PERSON-000400,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000110,PERSON-000551,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000705,PERSON-000564,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000577,PERSON-000927,IDENTITY_CLONING,1,RING-0004,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000634,PERSON-000691,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000413,PERSON-000598,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000494,PERSON-000962,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000228,PERSON-000054,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000173,PERSON-000429,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000626,PERSON-000386,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000876,PERSON-000180,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000174,PERSON-000256,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000023,PERSON-000814,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000948,PERSON-000453,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000258,PERSON-000426,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000901,PERSON-000356,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000742,PERSON-000376,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000736,PERSON-000531,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000312,PERSON-000577,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000287,PERSON-000215,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000597,PERSON-000719,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000724,PERSON-000822,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000482,PERSON-000746,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000713,PERSON-000483,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000989,PERSON-000023,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000962,PERSON-000769,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000081,PERSON-000619,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000306,PERSON-000969,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000625,PERSON-000249,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000855,PERSON-000447,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000155,PERSON-000536,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000002,PERSON-000069,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000929,PERSON-000234,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000522,PERSON-000163,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000147,PERSON-000053,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000162,PERSON-000425,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000443,PERSON-000960,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000399,PERSON-000760,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000358,PERSON-000026,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000897,PERSON-000896,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000286,PERSON-000455,LEGIT_GUARDIAN_ACCOUNT,0,,Two distinct students have recorded guardian payout authorization.
+BEN-000961,PERSON-000808,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000097,PERSON-000251,CIRCULAR_TRANSFERS,1,RING-0017,A chronological funded sequence returns money to its origin.
+BEN-000710,PERSON-000384,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000533,PERSON-000570,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000406,PERSON-000980,CIRCULAR_TRANSFERS,1,RING-0017,A chronological funded sequence returns money to its origin.
+BEN-000826,PERSON-000315,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000144,PERSON-000683,LEGIT_CORRECTED_APPLICATION,0,,An earlier cancelled application is replaced by one approved claim; cancelled claim is unpaid.
+BEN-000787,PERSON-000332,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000009,PERSON-000047,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000297,PERSON-000782,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000405,PERSON-000492,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000416,PERSON-000291,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000476,PERSON-000644,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000656,PERSON-000779,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000415,PERSON-000503,CIRCULAR_TRANSFERS,1,RING-0017,A chronological funded sequence returns money to its origin.
+BEN-000773,PERSON-000007,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000171,PERSON-000204,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000016,PERSON-000933,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000082,PERSON-000775,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000440,PERSON-000237,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0011,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000493,PERSON-000110,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000683,PERSON-000888,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000755,PERSON-000724,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000457,PERSON-000328,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000295,PERSON-000286,LEGIT_COMPATIBLE_SCHEMES,0,,Tuition and study-material support are permitted together in the same year.
+BEN-000613,PERSON-000738,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000245,PERSON-000232,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000640,PERSON-000512,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000061,PERSON-000701,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000362,PERSON-000686,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000296,PERSON-000281,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000199,PERSON-000397,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000906,PERSON-000129,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000994,PERSON-000587,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000687,PERSON-000357,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000508,PERSON-001000,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000327,PERSON-000592,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000316,PERSON-000844,LEGIT_IDENTICAL_NAME,0,,"Same full name, distinct birth dates, contacts and accounts."
+BEN-000132,PERSON-000883,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000622,PERSON-000759,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000862,PERSON-000284,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000545,PERSON-000820,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000169,PERSON-000709,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000033,PERSON-000271,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000249,PERSON-000368,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000498,PERSON-000680,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000412,PERSON-000020,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000530,PERSON-000710,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000334,PERSON-000200,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000116,PERSON-000412,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000541,PERSON-000451,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000024,PERSON-000648,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000747,PERSON-000711,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000011,PERSON-000963,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000332,PERSON-000715,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000738,PERSON-000789,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000366,PERSON-000864,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000353,PERSON-000553,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000703,PERSON-000097,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000873,PERSON-000093,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000761,PERSON-000302,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000322,PERSON-000636,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000180,PERSON-000444,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000841,PERSON-000793,IDENTITY_CLONING,1,RING-0007,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000958,PERSON-000088,LEGIT_IDENTICAL_NAME,0,,"Same full name, distinct birth dates, contacts and accounts."
+BEN-000717,PERSON-000509,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000146,PERSON-000181,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000447,PERSON-000399,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000786,PERSON-000377,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000509,PERSON-000106,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000483,PERSON-000055,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000727,PERSON-000461,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000219,PERSON-000243,LEGIT_COMPATIBLE_SCHEMES,0,,Tuition and study-material support are permitted together in the same year.
+BEN-000702,PERSON-000091,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000442,PERSON-000580,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000359,PERSON-000833,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000461,PERSON-000300,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000436,PERSON-000707,IDENTITY_CLONING,1,RING-0006,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000854,PERSON-000375,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000524,PERSON-000321,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000572,PERSON-000166,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000814,PERSON-000327,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000798,PERSON-000124,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000799,PERSON-000917,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000915,PERSON-000423,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000209,PERSON-000749,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000069,PERSON-000776,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000266,PERSON-000801,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000997,PERSON-000931,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000664,PERSON-000687,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000777,PERSON-000607,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000027,PERSON-000277,IDENTITY_CLONING,1,RING-0005,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000393,PERSON-000491,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000859,PERSON-000596,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000311,PERSON-000588,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000175,PERSON-000898,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000261,PERSON-000267,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000984,PERSON-000845,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000221,PERSON-000450,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000804,PERSON-000456,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000709,PERSON-000659,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000864,PERSON-000259,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000511,PERSON-000293,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000059,PERSON-000670,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000151,PERSON-000695,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000548,PERSON-000549,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000165,PERSON-000344,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000542,PERSON-000280,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000793,PERSON-000289,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000159,PERSON-000621,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000239,PERSON-000604,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000321,PERSON-000545,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000290,PERSON-000040,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000163,PERSON-000726,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000329,PERSON-000893,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000248,PERSON-000567,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000723,PERSON-000526,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000586,PERSON-000043,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000135,PERSON-000707,IDENTITY_CLONING,1,RING-0006,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000181,PERSON-000984,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000635,PERSON-000476,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000711,PERSON-000965,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000571,PERSON-000038,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000013,PERSON-000304,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000255,PERSON-000832,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000678,PERSON-000276,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000055,PERSON-000708,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000740,PERSON-000855,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000525,PERSON-000871,CIRCULAR_TRANSFERS,1,RING-0017,A chronological funded sequence returns money to its origin.
+BEN-000857,PERSON-000067,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000395,PERSON-000734,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000983,PERSON-000976,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000604,PERSON-000847,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000686,PERSON-000171,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000733,PERSON-000089,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000217,PERSON-000056,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000197,PERSON-000022,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000184,PERSON-000113,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000203,PERSON-000075,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000200,PERSON-000168,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000432,PERSON-000783,LEGIT_IDENTICAL_NAME,0,,"Same full name, distinct birth dates, contacts and accounts."
+BEN-000262,PERSON-000640,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000762,PERSON-000967,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000580,PERSON-000736,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000263,PERSON-000362,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000397,PERSON-000990,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000887,PERSON-000589,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000168,PERSON-000954,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000590,PERSON-000164,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000754,PERSON-000966,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000201,PERSON-000172,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000800,PERSON-000950,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000067,PERSON-000173,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000808,PERSON-000343,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000988,PERSON-000982,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000863,PERSON-000004,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000999,PERSON-000072,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000246,PERSON-000045,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000620,PERSON-000211,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000289,PERSON-000380,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000207,PERSON-000049,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000112,PERSON-000994,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000216,PERSON-000554,LEGIT_IDENTICAL_NAME,0,,"Same full name, distinct birth dates, contacts and accounts."
+BEN-000644,PERSON-000235,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000051,PERSON-000533,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000641,PERSON-000502,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000827,PERSON-000083,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000769,PERSON-000196,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000842,PERSON-000527,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000886,PERSON-000707,IDENTITY_CLONING,1,RING-0006,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000995,PERSON-000508,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000840,PERSON-000143,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000310,PERSON-000120,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000272,PERSON-000209,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000718,PERSON-000725,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000963,PERSON-000754,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000404,PERSON-000182,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000647,PERSON-000647,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000986,PERSON-000582,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000615,PERSON-000416,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000318,PERSON-000109,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000503,PERSON-000155,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000708,PERSON-000320,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000176,PERSON-000338,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000690,PERSON-000625,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000022,PERSON-000390,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000372,PERSON-000985,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000516,PERSON-000201,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0010,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000922,PERSON-000546,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000339,PERSON-000445,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000025,PERSON-000561,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000423,PERSON-000860,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000431,PERSON-000388,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000592,PERSON-000602,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000106,PERSON-000239,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000581,PERSON-000193,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000382,PERSON-000612,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000552,PERSON-000942,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000860,PERSON-000571,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000816,PERSON-000961,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000241,PERSON-000698,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0010,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000661,PERSON-000956,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000269,PERSON-000788,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000539,PERSON-000104,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000325,PERSON-000260,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000879,PERSON-000490,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000250,PERSON-000731,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000973,PERSON-000039,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000682,PERSON-000265,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000837,PERSON-000721,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000941,PERSON-000780,LEGIT_GUARDIAN_ACCOUNT,0,,Two distinct students have recorded guardian payout authorization.
+BEN-000853,PERSON-000212,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000114,PERSON-000653,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000270,PERSON-000716,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000980,PERSON-000562,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000679,PERSON-000489,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000904,PERSON-000998,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000746,PERSON-000152,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000387,PERSON-000576,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0010,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000490,PERSON-000650,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000183,PERSON-000925,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000073,PERSON-000071,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000966,PERSON-000543,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000561,PERSON-000404,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000884,PERSON-000978,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000467,PERSON-000082,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000008,PERSON-000633,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000781,PERSON-000306,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000418,PERSON-000366,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000043,PERSON-000899,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000757,PERSON-000365,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000976,PERSON-000804,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000881,PERSON-000889,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000560,PERSON-000431,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000612,PERSON-000537,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000040,PERSON-000874,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000825,PERSON-000002,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000707,PERSON-000148,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000550,PERSON-000443,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000085,PERSON-000208,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000829,PERSON-000074,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000852,PERSON-000277,IDENTITY_CLONING,1,RING-0005,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000205,PERSON-000773,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000455,PERSON-000667,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000225,PERSON-000466,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000223,PERSON-000236,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000417,PERSON-000442,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000445,PERSON-000358,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000275,PERSON-000474,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000565,PERSON-000737,LEGIT_IDENTICAL_NAME,0,,"Same full name, distinct birth dates, contacts and accounts."
+BEN-000324,PERSON-000674,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000939,PERSON-000740,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000156,PERSON-000191,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000706,PERSON-000261,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000987,PERSON-000664,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000100,PERSON-000413,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000925,PERSON-000809,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000531,PERSON-000722,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000487,PERSON-000515,LEGIT_CORRECTED_APPLICATION,0,,An earlier cancelled application is replaced by one approved claim; cancelled claim is unpaid.
+BEN-000836,PERSON-000364,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000208,PERSON-000050,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000017,PERSON-000584,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000923,PERSON-000700,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000045,PERSON-000613,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000488,PERSON-000370,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000636,PERSON-000937,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000214,PERSON-000841,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000537,PERSON-000192,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000611,PERSON-000158,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000771,PERSON-000548,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000870,PERSON-000770,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000688,PERSON-000481,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000916,PERSON-000751,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000758,PERSON-000044,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000230,PERSON-000618,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000833,PERSON-000244,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000569,PERSON-000221,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000928,PERSON-000772,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000669,PERSON-000935,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000719,PERSON-000231,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000030,PERSON-000266,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000693,PERSON-000720,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000557,PERSON-000900,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000049,PERSON-000566,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000317,PERSON-000440,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000617,PERSON-000824,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000243,PERSON-000310,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000177,PERSON-000918,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000402,PERSON-000122,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000259,PERSON-000395,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000878,PERSON-000345,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000122,PERSON-000298,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000696,PERSON-000930,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000091,PERSON-000964,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000401,PERSON-000024,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000345,PERSON-000480,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000307,PERSON-000949,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000411,PERSON-000556,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000933,PERSON-000486,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000974,PERSON-000354,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000130,PERSON-000216,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000985,PERSON-000217,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000896,PERSON-000472,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000350,PERSON-000712,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000096,PERSON-000811,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000784,PERSON-000452,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000789,PERSON-000021,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000121,PERSON-000115,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000743,PERSON-000187,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000347,PERSON-000547,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000515,PERSON-000317,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000648,PERSON-000645,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000685,PERSON-000263,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000654,PERSON-000875,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000532,PERSON-000793,IDENTITY_CLONING,1,RING-0007,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000783,PERSON-000151,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000745,PERSON-000835,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000893,PERSON-000197,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000129,PERSON-000890,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000558,PERSON-000090,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000141,PERSON-000311,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000365,PERSON-000585,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000741,PERSON-000886,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000660,PERSON-000114,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000102,PERSON-000189,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000674,PERSON-000437,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000414,PERSON-000206,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000377,PERSON-000525,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000845,PERSON-000077,LEGIT_CORRECTED_APPLICATION,0,,An earlier cancelled application is replaced by one approved claim; cancelled claim is unpaid.
+BEN-000868,PERSON-000513,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000288,PERSON-000913,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000479,PERSON-000915,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000309,PERSON-000794,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000128,PERSON-000753,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000616,PERSON-000355,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000512,PERSON-000511,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000071,PERSON-000912,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000313,PERSON-000066,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000271,PERSON-000449,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000716,PERSON-000821,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000160,PERSON-000993,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000003,PERSON-000303,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000912,PERSON-000615,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000595,PERSON-000383,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000478,PERSON-000278,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000331,PERSON-000519,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000795,PERSON-000119,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000992,PERSON-000099,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000523,PERSON-000529,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000677,PERSON-000643,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000389,PERSON-000411,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000232,PERSON-000542,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000489,PERSON-000939,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000477,PERSON-000672,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000782,PERSON-000128,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000937,PERSON-000393,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000588,PERSON-000713,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000883,PERSON-000882,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000154,PERSON-000174,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000298,PERSON-000252,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000528,PERSON-000348,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000251,PERSON-000034,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000506,PERSON-000319,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000739,PERSON-000468,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000681,PERSON-000351,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000697,PERSON-000121,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000712,PERSON-000205,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000649,PERSON-000593,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000462,PERSON-000597,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000566,PERSON-000257,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000231,PERSON-000337,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000806,PERSON-000035,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000587,PERSON-000297,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000701,PERSON-000739,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000385,PERSON-000693,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000057,PERSON-000008,LEGIT_CORRECTED_APPLICATION,0,,An earlier cancelled application is replaced by one approved claim; cancelled claim is unpaid.
+BEN-000847,PERSON-000403,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000058,PERSON-000927,IDENTITY_CLONING,1,RING-0004,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000520,PERSON-000594,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000608,PERSON-000493,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000563,PERSON-000605,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000764,PERSON-000033,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000186,PERSON-000953,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000463,PERSON-000408,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000380,PERSON-000504,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000152,PERSON-000218,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000050,PERSON-000207,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000780,PERSON-000795,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000430,PERSON-000153,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000951,PERSON-000902,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000204,PERSON-000436,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000805,PERSON-000848,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000066,PERSON-000861,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000381,PERSON-000810,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000846,PERSON-000494,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000161,PERSON-000677,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000964,PERSON-000522,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000766,PERSON-000748,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000605,PERSON-000734,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000419,PERSON-000488,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000222,PERSON-000669,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000182,PERSON-000134,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000240,PERSON-000214,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000629,PERSON-000316,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000725,PERSON-000241,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000838,PERSON-000622,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000638,PERSON-000628,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000356,PERSON-000470,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000120,PERSON-000601,LEGIT_GUARDIAN_ACCOUNT,0,,Two distinct students have recorded guardian payout authorization.
+BEN-000544,PERSON-000467,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000926,PERSON-000819,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000538,PERSON-000270,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000185,PERSON-000459,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000619,PERSON-000506,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000692,PERSON-000195,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000284,PERSON-000223,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000458,PERSON-000363,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000562,PERSON-000880,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000060,PERSON-000326,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000880,PERSON-000132,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000623,PERSON-000001,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000195,PERSON-000150,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000192,PERSON-000417,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000340,PERSON-000559,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000396,PERSON-000402,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000305,PERSON-000974,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000821,PERSON-000139,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000028,PERSON-000957,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000042,PERSON-000618,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000817,PERSON-000540,COMMON_COLLECTION_ACCOUNT,1,RING-0014,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000424,PERSON-000255,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000218,PERSON-000638,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000210,PERSON-000078,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000547,PERSON-000422,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000944,PERSON-000568,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000133,PERSON-000849,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000109,PERSON-000676,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000400,PERSON-000658,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000698,PERSON-000464,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000735,PERSON-000555,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000153,PERSON-000126,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000874,PERSON-000475,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000031,PERSON-000807,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000044,PERSON-000160,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000279,PERSON-000988,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000056,PERSON-000081,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000229,PERSON-000238,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000010,PERSON-000550,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000900,PERSON-000614,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000495,PERSON-000578,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000349,PERSON-000583,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000119,PERSON-000728,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000885,PERSON-000793,IDENTITY_CLONING,1,RING-0007,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000891,PERSON-000062,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000234,PERSON-000591,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000053,PERSON-000287,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000950,PERSON-000133,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000486,PERSON-000921,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000300,PERSON-000487,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000115,PERSON-000706,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000936,PERSON-000987,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000908,PERSON-000165,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000722,PERSON-000784,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000673,PERSON-000632,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000108,PERSON-000910,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000643,PERSON-000971,IDENTITY_CLONING,1,RING-0003,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000014,PERSON-000318,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000268,PERSON-000951,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000704,PERSON-000014,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000920,PERSON-000222,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000726,PERSON-000858,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000834,PERSON-000923,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000369,PERSON-000906,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000026,PERSON-000609,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000675,PERSON-000892,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000371,PERSON-000590,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000924,PERSON-000654,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000452,PERSON-000324,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000610,PERSON-000335,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000527,PERSON-000649,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000627,PERSON-000856,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000763,PERSON-000135,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000189,PERSON-000322,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000179,PERSON-000599,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000579,PERSON-000630,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000170,PERSON-000340,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000107,PERSON-000505,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000075,PERSON-000983,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000274,PERSON-000419,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000471,PERSON-000911,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000158,PERSON-000446,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000546,PERSON-000156,BATCH_FABRICATION,1,RING-0019,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000285,PERSON-000146,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000497,PERSON-000952,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000247,PERSON-000763,CIRCULAR_TRANSFERS,1,RING-0016,A chronological funded sequence returns money to its origin.
+BEN-000242,PERSON-000188,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000254,PERSON-000941,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000867,PERSON-000818,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000342,PERSON-000242,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000903,PERSON-000359,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000238,PERSON-000873,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000792,PERSON-000042,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000865,PERSON-000685,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000585,PERSON-000333,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000869,PERSON-000523,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000475,PERSON-000762,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000485,PERSON-000301,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000403,PERSON-000652,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000991,PERSON-000999,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000484,PERSON-000092,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000188,PERSON-000477,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000744,PERSON-000958,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000319,PERSON-000846,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000383,PERSON-000837,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000856,PERSON-000103,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000090,PERSON-000704,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000540,PERSON-000894,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000409,PERSON-000624,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000551,PERSON-000662,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000094,PERSON-000565,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000517,PERSON-000154,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000624,PERSON-000879,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000715,PERSON-000767,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000952,PERSON-000838,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000756,PERSON-000003,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000889,PERSON-000730,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000433,PERSON-000947,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000206,PERSON-000420,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000943,PERSON-000085,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000621,PERSON-000777,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000047,PERSON-000842,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000375,PERSON-000012,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000076,PERSON-000269,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000614,PERSON-000469,IDENTITY_CLONING,1,RING-0002,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000386,PERSON-000498,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000813,PERSON-000367,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000663,PERSON-000971,IDENTITY_CLONING,1,RING-0003,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000947,PERSON-000544,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000714,PERSON-000928,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000398,PERSON-000547,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000048,PERSON-000534,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000198,PERSON-000735,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000791,PERSON-000778,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000602,PERSON-000742,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000751,PERSON-000060,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000767,PERSON-000657,LEGIT_CORRECTED_APPLICATION,0,,An earlier cancelled application is replaced by one approved claim; cancelled claim is unpaid.
+BEN-000391,PERSON-000996,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000473,PERSON-000743,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000224,PERSON-000641,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000006,PERSON-000862,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000728,PERSON-000768,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000252,PERSON-000690,LEGIT_GUARDIAN_ACCOUNT,0,,Two distinct students have recorded guardian payout authorization.
+BEN-000098,PERSON-000940,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000278,PERSON-000105,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000257,PERSON-000064,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000095,PERSON-000312,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000062,PERSON-000675,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000438,PERSON-000063,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000670,PERSON-000392,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000553,PERSON-000387,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000631,PERSON-000684,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000363,PERSON-000699,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000469,PERSON-000405,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000913,PERSON-000560,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000344,PERSON-000059,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000823,PERSON-000144,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000093,PERSON-000692,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000480,PERSON-000723,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000935,PERSON-000229,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000695,PERSON-000005,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000451,PERSON-000457,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000123,PERSON-000136,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000178,PERSON-000248,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000765,PERSON-000497,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000931,PERSON-000991,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000374,PERSON-000651,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000394,PERSON-000313,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000127,PERSON-000637,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000453,PERSON-000660,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000583,PERSON-000617,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000346,PERSON-000428,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000646,PERSON-000626,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000822,PERSON-000836,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000700,PERSON-000329,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000037,PERSON-000908,SHARED_PAYOUT_ACCOUNT,1,RING-0009,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000429,PERSON-000138,CIRCULAR_TRANSFERS,1,RING-0016,A chronological funded sequence returns money to its origin.
+BEN-000642,PERSON-000145,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000435,PERSON-000904,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000606,PERSON-000478,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000694,PERSON-000176,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000131,PERSON-000052,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000815,PERSON-000471,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000034,PERSON-000703,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000918,PERSON-000922,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000348,PERSON-000147,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000633,PERSON-000177,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000752,PERSON-000394,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000909,PERSON-000349,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000472,PERSON-000432,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000046,PERSON-000718,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000790,PERSON-000901,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000930,PERSON-000352,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000774,PERSON-000015,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000892,PERSON-000006,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000666,PERSON-000558,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000088,PERSON-000391,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000379,PERSON-000227,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000594,PERSON-000361,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000676,PERSON-000130,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000555,PERSON-000401,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000760,PERSON-000482,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000801,PERSON-000803,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000236,PERSON-000500,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000888,PERSON-000532,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000434,PERSON-000539,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000267,PERSON-000992,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000187,PERSON-000926,CIRCULAR_TRANSFERS,1,RING-0016,A chronological funded sequence returns money to its origin.
+BEN-000564,PERSON-000790,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000812,PERSON-000473,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000213,PERSON-000346,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000953,PERSON-000334,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000388,PERSON-000331,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000768,PERSON-000891,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000584,PERSON-000955,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000499,PERSON-000051,LEGIT_CORRECTED_APPLICATION,0,,An earlier cancelled application is replaced by one approved claim; cancelled claim is unpaid.
+BEN-000244,PERSON-000757,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000191,PERSON-000771,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000481,PERSON-000843,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000364,PERSON-000968,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000065,PERSON-000479,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000607,PERSON-000028,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000283,PERSON-000761,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0011,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000426,PERSON-000530,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000427,PERSON-000292,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000556,PERSON-000225,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000335,PERSON-000268,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000103,PERSON-000378,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000510,PERSON-000611,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000655,PERSON-000462,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000280,PERSON-000854,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0010,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000872,PERSON-000946,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000819,PERSON-000228,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000470,PERSON-000885,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000502,PERSON-000084,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000684,PERSON-000224,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000567,PERSON-000495,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000273,PERSON-000011,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000982,PERSON-000825,LEGIT_REGISTRATION_CAMP,0,,Genuine campus enrollment camp produces a short registration burst.
+BEN-000303,PERSON-000339,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000651,PERSON-000600,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000136,PERSON-000048,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000459,PERSON-000379,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000811,PERSON-000673,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000118,PERSON-000839,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000142,PERSON-000727,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000038,PERSON-000840,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000328,PERSON-000535,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000235,PERSON-000414,LEGIT_COMPATIBLE_SCHEMES,0,,Tuition and study-material support are permitted together in the same year.
+BEN-000446,PERSON-000876,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000281,PERSON-000382,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000215,PERSON-000914,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000534,PERSON-000799,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000942,PERSON-000800,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000657,PERSON-000765,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000902,PERSON-000813,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000573,PERSON-000616,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000589,PERSON-000903,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000911,PERSON-000747,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000504,PERSON-000131,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000437,PERSON-000634,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000019,PERSON-000518,LEGIT_FAMILY_CONTACT,0,,Distinct family members share their household contact and residence.
+BEN-000818,PERSON-000389,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000370,PERSON-000178,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000357,PERSON-000161,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000535,PERSON-000427,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000810,PERSON-000499,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000575,PERSON-000203,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000111,PERSON-000878,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000849,PERSON-000851,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000501,PERSON-000245,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000699,PERSON-000149,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000770,PERSON-000603,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000233,PERSON-000863,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000954,PERSON-000398,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000117,PERSON-000909,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000449,PERSON-000639,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000005,PERSON-000705,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000998,PERSON-000179,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000336,PERSON-000934,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000294,PERSON-000226,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000720,PERSON-000501,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000794,PERSON-000764,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000054,PERSON-000254,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000628,PERSON-000620,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000113,PERSON-000418,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000776,PERSON-000936,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000858,PERSON-000127,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000549,PERSON-000943,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000730,PERSON-000448,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000543,PERSON-000167,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000140,PERSON-000507,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000474,PERSON-000679,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000871,PERSON-000973,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000955,PERSON-000285,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000341,PERSON-000932,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000975,PERSON-000295,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000639,PERSON-000828,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000574,PERSON-000199,BATCH_FABRICATION,1,RING-0018,"Closely timed registrations, related names/contacts and common payouts indicate coordinated creation."
+BEN-000373,PERSON-000975,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000875,PERSON-000852,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000957,PERSON-000970,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000671,PERSON-000142,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000721,PERSON-000112,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000645,PERSON-000866,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000196,PERSON-000750,GHOST_IDENTITY,1,RING-0012,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000143,PERSON-000296,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000749,PERSON-000665,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000378,PERSON-000360,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000004,PERSON-000520,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000292,PERSON-000065,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000323,PERSON-000371,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000354,PERSON-000460,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000691,PERSON-000895,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000824,PERSON-000948,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000392,PERSON-000017,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000796,PERSON-000353,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000466,PERSON-000406,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000960,PERSON-000184,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000299,PERSON-000865,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000820,PERSON-000068,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000454,PERSON-000859,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000072,PERSON-000689,LEGIT_GUARDIAN_ACCOUNT,0,,Two distinct students have recorded guardian payout authorization.
+BEN-000898,PERSON-000009,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000368,PERSON-000279,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000367,PERSON-000729,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000668,PERSON-000655,LEGIT_HOSTEL_ADDRESS,0,,Five distinct residents share a hostel address; individual accounts and contacts.
+BEN-000775,PERSON-000774,LEGIT_COMMON_SURNAME,0,,Distinct local students share a common surname and institution.
+BEN-000220,PERSON-000307,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000659,PERSON-000938,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000083,PERSON-000853,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000529,PERSON-000574,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000407,PERSON-000827,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000101,PERSON-000247,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000731,PERSON-000671,LEGIT_BENIGN_CYCLE,0,,A funded roommate expense advance is repaid through three accounts.
+BEN-000598,PERSON-000646,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000917,PERSON-000288,INCOMPATIBLE_SCHEME_CLAIMS,1,RING-0010,Connected students receive both mutually exclusive tuition awards in one academic year.
+BEN-000894,PERSON-000741,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000420,PERSON-000018,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000835,PERSON-000341,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000326,PERSON-000732,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000785,PERSON-000016,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000844,PERSON-000305,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000355,PERSON-000202,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000536,PERSON-000745,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000304,PERSON-000294,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000077,PERSON-000433,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000753,PERSON-000681,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000194,PERSON-000061,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000662,PERSON-000635,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000658,PERSON-000438,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000667,PERSON-000785,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000972,PERSON-000272,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000390,PERSON-000717,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000949,PERSON-000995,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000779,PERSON-000791,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000052,PERSON-000781,LEGIT_COMPATIBLE_SCHEMES,0,,Tuition and study-material support are permitted together in the same year.
+BEN-000099,PERSON-000959,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000145,PERSON-000198,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000831,PERSON-000250,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000748,PERSON-000041,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000330,PERSON-000682,COMMON_COLLECTION_ACCOUNT,1,RING-0015,Recipients forward a portion of funded scholarships to a common downstream account.
+BEN-000981,PERSON-000755,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000134,PERSON-000372,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000603,PERSON-000325,SHARED_PAYOUT_ACCOUNT,1,RING-0008,Unrelated identities concentrate awards in a small payout-account hub.
+BEN-000866,PERSON-000485,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000227,PERSON-000756,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000150,PERSON-000107,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000850,PERSON-000094,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000166,PERSON-000557,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000444,PERSON-000696,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000450,PERSON-000219,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-001000,PERSON-000458,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000514,PERSON-000595,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000899,PERSON-000220,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000086,PERSON-000634,IDENTITY_CLONING,1,CL-017,Aliases of the same people claim multiple awards using spelling/initial variants.
+BEN-000105,PERSON-000290,GHOST_IDENTITY,1,RING-0013,Fabricated claims share payout/contact infrastructure; some receive approval despite missing enrollment.
+BEN-000276,PERSON-000661,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000360,PERSON-000786,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.
+BEN-000029,PERSON-000415,CIRCULAR_TRANSFERS,1,RING-0016,A chronological funded sequence returns money to its origin.
+BEN-000927,PERSON-000454,NORMAL,0,,Distinct synthetic scholarship student; no injected suspicious behavior.

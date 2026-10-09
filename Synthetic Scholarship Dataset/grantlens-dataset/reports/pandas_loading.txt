@@ -1,0 +1,3 @@
+Pandas version: 2.2.3
+PASS: 10000 beneficiaries; 14441 applications; 15835 transactions; 10000 separate labels
+PASS: transfer nulls, DBT application IDs, and label separation

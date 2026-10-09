@@ -1,0 +1,530 @@
+{
+  "rings": [
+    {
+      "fraud_ring_id": "CL-017",
+      "member_ids": [
+        "BEN-000232",
+        "BEN-000137",
+        "BEN-000737",
+        "BEN-000756",
+        "BEN-000230",
+        "BEN-000042",
+        "BEN-000347",
+        "BEN-000398",
+        "BEN-000395",
+        "BEN-000605",
+        "BEN-000226",
+        "BEN-000997",
+        "BEN-000086",
+        "BEN-000437",
+        "BEN-000422",
+        "BEN-000673"
+      ],
+      "scenarios": [
+        "IDENTITY_CLONING",
+        "SHARED_PAYOUT_ACCOUNT",
+        "INCOMPATIBLE_SCHEME_CLAIMS",
+        "COMMON_COLLECTION_ACCOUNT",
+        "CIRCULAR_TRANSFERS"
+      ],
+      "collector_account": "ACC-001026",
+      "cycle_accounts": [
+        "ACC-001694",
+        "ACC-001026",
+        "ACC-001045"
+      ],
+      "transfer_ids": [
+        "TXN-00001359",
+        "TXN-00000083",
+        "TXN-00000549",
+        "TXN-00000276",
+        "TXN-00000168"
+      ],
+      "target_disbursement_inr": 820000,
+      "payout_accounts": [
+        "ACC-001045",
+        "ACC-001694"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0002",
+      "member_ids": [
+        "BEN-000940",
+        "BEN-000614",
+        "BEN-000672"
+      ],
+      "scenarios": [
+        "IDENTITY_CLONING"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000619",
+        "ACC-001211",
+        "ACC-001310"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0003",
+      "member_ids": [
+        "BEN-000643",
+        "BEN-000956",
+        "BEN-000663"
+      ],
+      "scenarios": [
+        "IDENTITY_CLONING"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-001631",
+        "ACC-002778"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0004",
+      "member_ids": [
+        "BEN-000577",
+        "BEN-000058",
+        "BEN-000491"
+      ],
+      "scenarios": [
+        "IDENTITY_CLONING"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-001084",
+        "ACC-001093"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0005",
+      "member_ids": [
+        "BEN-000027",
+        "BEN-000007",
+        "BEN-000852"
+      ],
+      "scenarios": [
+        "IDENTITY_CLONING"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000592",
+        "ACC-001373",
+        "ACC-002519"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0006",
+      "member_ids": [
+        "BEN-000886",
+        "BEN-000436",
+        "BEN-000135"
+      ],
+      "scenarios": [
+        "IDENTITY_CLONING"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000058",
+        "ACC-000614",
+        "ACC-001928"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0007",
+      "member_ids": [
+        "BEN-000532",
+        "BEN-000885",
+        "BEN-000841"
+      ],
+      "scenarios": [
+        "IDENTITY_CLONING"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000411",
+        "ACC-000971",
+        "ACC-002028"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0008",
+      "member_ids": [
+        "BEN-000992",
+        "BEN-000010",
+        "BEN-000224",
+        "BEN-000482",
+        "BEN-000859",
+        "BEN-000713",
+        "BEN-000603",
+        "BEN-000701",
+        "BEN-000878",
+        "BEN-000777"
+      ],
+      "scenarios": [
+        "SHARED_PAYOUT_ACCOUNT"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-002457"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0009",
+      "member_ids": [
+        "BEN-000320",
+        "BEN-000864",
+        "BEN-000629",
+        "BEN-000803",
+        "BEN-000453",
+        "BEN-000566",
+        "BEN-000806",
+        "BEN-000032",
+        "BEN-000580",
+        "BEN-000037"
+      ],
+      "scenarios": [
+        "SHARED_PAYOUT_ACCOUNT"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-002038",
+        "ACC-002154"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0010",
+      "member_ids": [
+        "BEN-000280",
+        "BEN-000241",
+        "BEN-000387",
+        "BEN-000516",
+        "BEN-000917"
+      ],
+      "scenarios": [
+        "INCOMPATIBLE_SCHEME_CLAIMS"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000625",
+        "ACC-002030",
+        "ACC-002041",
+        "ACC-002348",
+        "ACC-002737"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0011",
+      "member_ids": [
+        "BEN-000554",
+        "BEN-000465",
+        "BEN-000993",
+        "BEN-000283",
+        "BEN-000440"
+      ],
+      "scenarios": [
+        "INCOMPATIBLE_SCHEME_CLAIMS"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000826",
+        "ACC-001819",
+        "ACC-002405",
+        "ACC-002842",
+        "ACC-002843"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0012",
+      "member_ids": [
+        "BEN-000196",
+        "BEN-000670",
+        "BEN-000843",
+        "BEN-000310",
+        "BEN-000921",
+        "BEN-000225",
+        "BEN-000005",
+        "BEN-000353"
+      ],
+      "scenarios": [
+        "GHOST_IDENTITY"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-001625"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0013",
+      "member_ids": [
+        "BEN-000183",
+        "BEN-000809",
+        "BEN-000105",
+        "BEN-000447",
+        "BEN-000282",
+        "BEN-000371",
+        "BEN-000075",
+        "BEN-000975"
+      ],
+      "scenarios": [
+        "GHOST_IDENTITY"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000483"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0014",
+      "member_ids": [
+        "BEN-000382",
+        "BEN-000022",
+        "BEN-000626",
+        "BEN-000296",
+        "BEN-000994",
+        "BEN-000817",
+        "BEN-000221",
+        "BEN-000724"
+      ],
+      "scenarios": [
+        "COMMON_COLLECTION_ACCOUNT"
+      ],
+      "collector_account": "ACC-001527",
+      "cycle_accounts": [],
+      "transfer_ids": [
+        "TXN-00001254",
+        "TXN-00000976",
+        "TXN-00000769",
+        "TXN-00000713",
+        "TXN-00000149",
+        "TXN-00000931",
+        "TXN-00000565",
+        "TXN-00000041"
+      ],
+      "payout_accounts": [
+        "ACC-000526",
+        "ACC-000612",
+        "ACC-000653",
+        "ACC-000906",
+        "ACC-001531",
+        "ACC-001964",
+        "ACC-002145",
+        "ACC-002901"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0015",
+      "member_ids": [
+        "BEN-000656",
+        "BEN-000902",
+        "BEN-000587",
+        "BEN-000330",
+        "BEN-000544",
+        "BEN-000837",
+        "BEN-000585",
+        "BEN-000506"
+      ],
+      "scenarios": [
+        "COMMON_COLLECTION_ACCOUNT"
+      ],
+      "collector_account": "ACC-001996",
+      "cycle_accounts": [],
+      "transfer_ids": [
+        "TXN-00000968",
+        "TXN-00000526",
+        "TXN-00000386",
+        "TXN-00000033",
+        "TXN-00001114",
+        "TXN-00000656",
+        "TXN-00000169",
+        "TXN-00000751"
+      ],
+      "payout_accounts": [
+        "ACC-000230",
+        "ACC-001711",
+        "ACC-001802",
+        "ACC-001824",
+        "ACC-002102",
+        "ACC-002257",
+        "ACC-002515",
+        "ACC-002564"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0016",
+      "member_ids": [
+        "BEN-000247",
+        "BEN-000029",
+        "BEN-000187",
+        "BEN-000429"
+      ],
+      "scenarios": [
+        "CIRCULAR_TRANSFERS"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [
+        "ACC-002613",
+        "ACC-002001",
+        "ACC-001111",
+        "ACC-000942"
+      ],
+      "transfer_ids": [
+        "TXN-00000857",
+        "TXN-00001119",
+        "TXN-00001454",
+        "TXN-00001555"
+      ],
+      "payout_accounts": [
+        "ACC-000942",
+        "ACC-001111",
+        "ACC-002001",
+        "ACC-002613"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0017",
+      "member_ids": [
+        "BEN-000525",
+        "BEN-000097",
+        "BEN-000406",
+        "BEN-000415"
+      ],
+      "scenarios": [
+        "CIRCULAR_TRANSFERS"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [
+        "ACC-000563",
+        "ACC-000383",
+        "ACC-001827",
+        "ACC-001778"
+      ],
+      "transfer_ids": [
+        "TXN-00000312",
+        "TXN-00000648",
+        "TXN-00000661",
+        "TXN-00001274"
+      ],
+      "payout_accounts": [
+        "ACC-000383",
+        "ACC-000563",
+        "ACC-001778",
+        "ACC-001827"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0018",
+      "member_ids": [
+        "BEN-000574",
+        "BEN-000747",
+        "BEN-000063",
+        "BEN-000693",
+        "BEN-000028",
+        "BEN-000246",
+        "BEN-000742",
+        "BEN-000646",
+        "BEN-000363",
+        "BEN-000586"
+      ],
+      "scenarios": [
+        "BATCH_FABRICATION"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000463",
+        "ACC-001360"
+      ]
+    },
+    {
+      "fraud_ring_id": "RING-0019",
+      "member_ids": [
+        "BEN-000509",
+        "BEN-000546",
+        "BEN-000078",
+        "BEN-000923",
+        "BEN-000362",
+        "BEN-000197",
+        "BEN-000317",
+        "BEN-000490",
+        "BEN-000951",
+        "BEN-000780"
+      ],
+      "scenarios": [
+        "BATCH_FABRICATION"
+      ],
+      "collector_account": null,
+      "cycle_accounts": [],
+      "transfer_ids": [],
+      "payout_accounts": [
+        "ACC-000395",
+        "ACC-000569"
+      ]
+    }
+  ],
+  "benign_cycles": [
+    {
+      "case_id": "CONTROL-0007",
+      "cycle_accounts": [
+        "ACC-002605",
+        "ACC-002024",
+        "ACC-002917"
+      ],
+      "transfer_ids": [
+        "TXN-00000774",
+        "TXN-00001001",
+        "TXN-00000772"
+      ]
+    },
+    {
+      "case_id": "CONTROL-0016",
+      "cycle_accounts": [
+        "ACC-002049",
+        "ACC-002720",
+        "ACC-002504"
+      ],
+      "transfer_ids": [
+        "TXN-00000637",
+        "TXN-00000873",
+        "TXN-00000812"
+      ]
+    },
+    {
+      "case_id": "CONTROL-0025",
+      "cycle_accounts": [
+        "ACC-000710",
+        "ACC-000817",
+        "ACC-002819"
+      ],
+      "transfer_ids": [
+        "TXN-00000960",
+        "TXN-00001368",
+        "TXN-00000001"
+      ]
+    }
+  ]
+}

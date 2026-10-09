@@ -1,0 +1,42 @@
+{
+  "identity_matching": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "true_positives": 26,
+    "false_positives": 0,
+    "false_negatives": 0
+  },
+  "suspicious_records": {
+    "precision": 0.37237237237237236,
+    "recall": 1.0,
+    "f1": 0.5426695842450766,
+    "true_positives": 124,
+    "false_positives": 209,
+    "false_negatives": 0
+  },
+  "fraud_ring_detection_recall": 1.0,
+  "ring_metric_definition": "At least 50% of labeled ring members flagged, not exact community recovery",
+  "false_positive_rate": 0.23858447488584475,
+  "scenario_flag_rates": {
+    "NORMAL": 0.22971285892634208,
+    "GHOST_IDENTITY": 1.0,
+    "LEGIT_BENIGN_CYCLE": 1.0,
+    "LEGIT_FAMILY_CONTACT": 0.1111111111111111,
+    "LEGIT_HOSTEL_ADDRESS": 0.2,
+    "LEGIT_REGISTRATION_CAMP": 0.1111111111111111,
+    "SHARED_PAYOUT_ACCOUNT": 1.0,
+    "IDENTITY_CLONING": 1.0,
+    "LEGIT_IDENTICAL_NAME": 0.3333333333333333,
+    "BATCH_FABRICATION": 1.0,
+    "INCOMPATIBLE_SCHEME_CLAIMS": 1.0,
+    "LEGIT_COMMON_SURNAME": 0.2222222222222222,
+    "LEGIT_COMPATIBLE_SCHEMES": 0.16666666666666666,
+    "LEGIT_GUARDIAN_ACCOUNT": 0.6666666666666666,
+    "COMMON_COLLECTION_ACCOUNT": 1.0,
+    "CIRCULAR_TRANSFERS": 1.0,
+    "LEGIT_CORRECTED_APPLICATION": 0.3333333333333333
+  },
+  "processing_seconds": 0.0874,
+  "records_per_second": 11436.66
+}

@@ -1,0 +1,5 @@
+{
+  "beneficiaries": 10000,
+  "seed": 42,
+  "disbursements_per_beneficiary": 1.35
+}

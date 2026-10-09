@@ -1,0 +1,99 @@
+[
+  {
+    "dataset": "sample",
+    "audit_id": "99e630d8-9ab7-421d-803e-1b8b945e0604",
+    "summary": {
+      "beneficiary_count": 1000,
+      "application_count": 1442,
+      "transaction_count": 1588,
+      "identity_match_count": 26,
+      "suspicious_cluster_count": 24,
+      "cycle_count": 6,
+      "risk_distribution": {
+        "Low": 667,
+        "Medium": 315,
+        "Critical": 18
+      },
+      "flagged_beneficiaries": 333,
+      "total_disbursed": 27324250.0,
+      "processing_seconds": 0.0874,
+      "records_per_second": 11436.66,
+      "graph_nodes": 3894,
+      "graph_edges": 5619,
+      "linkage": {
+        "candidate_pairs": 386,
+        "skipped_large_blocks": 0
+      },
+      "safeguards": {
+        "suppressed_common_attributes": 0,
+        "skipped_cycle_components": 0,
+        "cycle_limit_reached": false
+      },
+      "validation": {
+        "rejected_rows": [],
+        "warnings": [],
+        "errors": [],
+        "accepted_counts": {
+          "beneficiaries": 1000,
+          "applications": 1442,
+          "transactions": 1588
+        }
+      },
+      "notice": "Potentially suspicious activity for auditor review; no determination of fraud."
+    },
+    "graph_nodes": 31,
+    "graph_edges": 95,
+    "case_id": "CLU-9729df5ab457",
+    "checks": "upload, references, pipeline, totals, graph, evidence, path, status/note, report, CORS passed"
+  },
+  {
+    "dataset": "main",
+    "audit_id": "7671a831-e005-4744-8b9a-584a52da8e8b",
+    "summary": {
+      "beneficiary_count": 10000,
+      "application_count": 14441,
+      "transaction_count": 15835,
+      "identity_match_count": 171,
+      "suspicious_cluster_count": 251,
+      "cycle_count": 51,
+      "risk_distribution": {
+        "Low": 6837,
+        "Medium": 3122,
+        "Critical": 41
+      },
+      "flagged_beneficiaries": 3163,
+      "total_disbursed": 279365250.0,
+      "processing_seconds": 1.0219,
+      "records_per_second": 9785.76,
+      "graph_nodes": 38317,
+      "graph_edges": 56332,
+      "linkage": {
+        "candidate_pairs": 6576,
+        "skipped_large_blocks": 0
+      },
+      "safeguards": {
+        "suppressed_common_attributes": 0,
+        "skipped_cycle_components": 0,
+        "cycle_limit_reached": false
+      },
+      "validation": {
+        "rejected_rows": [],
+        "warnings": [],
+        "errors": [],
+        "accepted_counts": {
+          "beneficiaries": 10000,
+          "applications": 14441,
+          "transactions": 15835
+        }
+      },
+      "notice": "Potentially suspicious activity for auditor review; no determination of fraud."
+    },
+    "graph_nodes": 29,
+    "graph_edges": 93,
+    "case_id": "CLU-af7bca6c2c32",
+    "checks": "upload, references, pipeline, totals, graph, evidence, path, status/note, report, CORS passed"
+  },
+  {
+    "audit_isolation": "PASS: sample remains 1000 after main completes"
+  }
+]
