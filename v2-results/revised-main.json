@@ -1,0 +1,129 @@
+{
+  "version": "v2",
+  "dataset": "../Synthetic Scholarship Dataset/grantlens-dataset/data",
+  "evaluated_at": "2026-10-09T13:41:33.583308+00:00",
+  "summary": {
+    "detector_version": "2.0",
+    "configuration": {
+      "detector_version": "2.0",
+      "collector_min_fraction": 0.2,
+      "collector_window_days": 14,
+      "cycle_min_fraction": 0.2,
+      "cycle_window_hours": 1,
+      "eligibility_points": 35,
+      "match_threshold": 76,
+      "strong_match": 85,
+      "block_limit": 100,
+      "shared_account_weight": 5,
+      "shared_phone_weight": 2,
+      "shared_address_weight": 1,
+      "identity_weight": 4,
+      "common_attribute_limit": 40,
+      "shared_account_min": 4,
+      "collector_min": 4,
+      "cycle_limit": 500,
+      "cycle_component_limit": 100,
+      "identity_points": 35,
+      "account_points": 40,
+      "scheme_points": 35,
+      "collector_points": 40,
+      "cycle_points": 45,
+      "batch_points": 35,
+      "risk_thresholds": {
+        "Medium": 30,
+        "High": 60,
+        "Critical": 80
+      },
+      "score_meaning": "Review priority index, not a calibrated fraud probability",
+      "exclusive_schemes": [
+        [
+          "SCH-01",
+          "SCH-02"
+        ]
+      ]
+    },
+    "beneficiary_count": 10000,
+    "application_count": 14441,
+    "transaction_count": 15835,
+    "identity_match_count": 171,
+    "suspicious_cluster_count": 174,
+    "cycle_count": 51,
+    "risk_distribution": {
+      "Low": 8911,
+      "Medium": 914,
+      "High": 173,
+      "Critical": 2
+    },
+    "flagged_beneficiaries": 1089,
+    "total_disbursed": 279365250.0,
+    "processing_seconds": 0.8434,
+    "records_per_second": 11857.24,
+    "graph_nodes": 38317,
+    "graph_edges": 56332,
+    "linkage": {
+      "candidate_pairs": 6576,
+      "skipped_large_blocks": 0
+    },
+    "safeguards": {
+      "suppressed_common_attributes": 0,
+      "skipped_cycle_components": 0,
+      "cycle_limit_reached": false
+    },
+    "validation": {
+      "rejected_rows": [],
+      "warnings": [],
+      "errors": [],
+      "accepted_counts": {
+        "beneficiaries": 10000,
+        "applications": 14441,
+        "transactions": 15835
+      }
+    },
+    "notice": "Potentially suspicious activity for auditor review; no determination of fraud."
+  },
+  "metrics": {
+    "identity_matching": {
+      "precision": 1.0,
+      "recall": 0.9095744680851063,
+      "f1": 0.9526462395543175,
+      "true_positives": 171,
+      "false_positives": 0,
+      "false_negatives": 17
+    },
+    "suspicious_records": {
+      "precision": 1.0,
+      "recall": 0.9936131386861314,
+      "f1": 0.996796338672769,
+      "true_positives": 1089,
+      "false_positives": 0,
+      "false_negatives": 7
+    },
+    "fraud_ring_detection_recall": 1.0,
+    "ring_metric_definition": "At least 50% of labeled ring members flagged, not exact community recovery",
+    "false_positive_rate": 0.0,
+    "scenario_flag_rates": {
+      "IDENTITY_CLONING": 0.9642857142857143,
+      "NORMAL": 0.0,
+      "LEGIT_IDENTICAL_NAME": 0.0,
+      "GHOST_IDENTITY": 1.0,
+      "COMMON_COLLECTION_ACCOUNT": 1.0,
+      "LEGIT_GUARDIAN_ACCOUNT": 0.0,
+      "LEGIT_BENIGN_CYCLE": 0.0,
+      "LEGIT_FAMILY_CONTACT": 0.0,
+      "SHARED_PAYOUT_ACCOUNT": 1.0,
+      "INCOMPATIBLE_SCHEME_CLAIMS": 1.0,
+      "LEGIT_COMPATIBLE_SCHEMES": 0.0,
+      "LEGIT_HOSTEL_ADDRESS": 0.0,
+      "BATCH_FABRICATION": 1.0,
+      "CIRCULAR_TRANSFERS": 1.0,
+      "LEGIT_COMMON_SURNAME": 0.0,
+      "LEGIT_CORRECTED_APPLICATION": 0.0,
+      "LEGIT_REGISTRATION_CAMP": 0.0
+    },
+    "processing_seconds": 0.8434,
+    "records_per_second": 11857.24
+  },
+  "false_positive_indicators": {},
+  "false_positive_examples": [],
+  "peak_rss_bytes": 218808320
+}

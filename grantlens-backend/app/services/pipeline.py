@@ -19,16 +19,21 @@ class Result:
     summary: dict
 
 
-def run(directory, config=CONFIG):
+def run(directory, config=CONFIG, stage=lambda name: None):
     start=perf_counter()
+    stage('Validation and normalization')
     dataset=ingest(directory)
+    stage('Record linkage')
     matches,link_stats=link(dataset.beneficiaries,config)
+    stage('Graph construction and community detection')
     graph,projection,transfers,communities,cycles,groups,graph_stats=build(dataset,matches,config)
+    stage('Risk scoring')
     risks,clusters=score(dataset,matches,transfers,communities,cycles,groups,config)
     for bid,risk in risks.items():
         graph.nodes[bid]['risk_score']=risk['risk_score']
     elapsed=perf_counter()-start
     return Result(dataset,matches,graph,risks,clusters,cycles,{
+        'detector_version':config.detector_version,'configuration':config.public(),
         'beneficiary_count':len(dataset.beneficiaries),'application_count':len(dataset.applications),
         'transaction_count':len(dataset.transactions),'identity_match_count':len(matches),
         'suspicious_cluster_count':len(clusters),'cycle_count':len(cycles),

@@ -17,8 +17,11 @@ def processed(tmp_path_factory):
 def test_scenarios_and_legitimate_controls(processed):
     path,result=processed
     metrics=evaluate(result,path/'ground_truth.csv')
-    for scenario in ['identity_cloning','shared_payout','scheme_overlap','ghost_identity','collector','circular_transfer','batch_fabrication']:
+    for scenario in ['identity_cloning','shared_payout','scheme_overlap','ghost_identity','circular_transfer','batch_fabrication']:
         assert metrics['scenario_flag_rates'][scenario]==1, scenario
+    # Frozen V2 tradeoff: four legacy collector records move <20% of receipts.
+    assert metrics['scenario_flag_rates']['collector']==.6
+    assert metrics['suspicious_records']['false_negatives']==4
     for scenario in ['legitimate_hostel','legitimate_guardian','legitimate_same_name']:
         assert metrics['scenario_flag_rates'][scenario]==0, scenario
     assert metrics['identity_matching']['precision']>=.95

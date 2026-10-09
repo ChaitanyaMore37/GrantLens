@@ -3,6 +3,12 @@ from dataclasses import dataclass, asdict
 
 @dataclass(frozen=True)
 class Settings:
+    detector_version: str = "2.0"
+    collector_min_fraction: float = 0.20
+    collector_window_days: int = 14
+    cycle_min_fraction: float = 0.20
+    cycle_window_hours: int = 1
+    eligibility_points: int = 35
     match_threshold: float = 76
     strong_match: float = 85
     block_limit: int = 100
