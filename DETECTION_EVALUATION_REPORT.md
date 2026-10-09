@@ -30,3 +30,7 @@ Community maximum score remains compatible; mean member score, flagged fraction 
 Main V2: 7 suspicious records remain missed. Identity linkage: 171 true matches, 17 misses, no false matches. Held-out seed 202: 123/124 suspicious records found; identity 24/26 links found. Ring recall is 100% on both, defined as at least half of labeled ring members flagged, NOT exact community recovery.
 
 The older backend-generated fixture loses four low-proportion collector records: recall 92/96 (95.83%), collector scenario recall 60%, ring recall 100%. Tests explicitly preserve this known tradeoff rather than lowering the threshold to fit it. Zero false positives on these generator controls is not a real-world precision claim. Benign large coordinated payments may still trigger; slow, dispersed or low-value diversion may be missed. Account roles are not independently verified. Rules need external datasets and domain review before use beyond this local prototype.
+
+## Supplied stress regression
+
+50,000 records, frozen rules: precision 100.0000%, recall 99.6677%, F1 0.9983, FP 0, FN 18; ring recall 100.0000%. Runtime 9.2743 seconds. This is another supplied generator-family regression, not an untouched external distribution. Full scenario/linkage metrics are in v2-results/revised-stress.json.

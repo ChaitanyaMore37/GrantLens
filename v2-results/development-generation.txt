@@ -1,0 +1,18 @@
+{
+  "output": "/tmp/grantlens-v2-development",
+  "counts": {
+    "main/beneficiaries.csv": 1000,
+    "main/applications.csv": 1454,
+    "main/transactions.csv": 1588,
+    "main/reference/institutions.csv": 96,
+    "main/reference/scheme_rules.csv": 6,
+    "main/reference/accounts.csv": 943,
+    "main/reference/account_authorizations.csv": 6,
+    "ground_truth/ground_truth.csv": 1000,
+    "ground_truth/ground_truth_pairs.csv": 1100,
+    "ground_truth/fraud_rings.csv": 19,
+    "ground_truth/scenario_memberships.csv": 188,
+    "ground_truth/lookalike_cases.csv": 35,
+    "ground_truth/intentional_anomalies.csv": 13
+  }
+}

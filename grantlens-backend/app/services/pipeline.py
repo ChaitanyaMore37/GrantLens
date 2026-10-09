@@ -35,7 +35,7 @@ def run(directory, config=CONFIG, stage=lambda name: None):
     return Result(dataset,matches,graph,risks,clusters,cycles,{
         'detector_version':config.detector_version,'configuration':config.public(),
         'beneficiary_count':len(dataset.beneficiaries),'application_count':len(dataset.applications),
-        'transaction_count':len(dataset.transactions),'identity_match_count':len(matches),
+        'transaction_count':len(dataset.transactions),'transfer_count':sum(t['transaction_type']=='TRANSFER' for t in dataset.transactions),'suspicious_cycle_count':sum(c.get('assessment')=='Suspicious' for c in cycles),'identity_match_count':len(matches),
         'suspicious_cluster_count':len(clusters),'cycle_count':len(cycles),
         'risk_distribution':dict(Counter(r['risk_level'] for r in risks.values())),
         'flagged_beneficiaries':sum(r['risk_score']>=30 for r in risks.values()),

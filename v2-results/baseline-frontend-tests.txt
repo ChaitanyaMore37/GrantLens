@@ -1,0 +1,12 @@
+
+> grantlens-frontend@1.0.0 test
+> vitest run
+
+
+ RUN  v5.0.3 /Users/chaitanyamore/Documents/ChatGPT/GrantLens Frontend
+
+
+ Test Files  3 passed (3)
+      Tests  23 passed (23)
+   Start at  19:08:06
+   Duration  1.25s (environment 40%, tests 34%, setup 10%, import 8%, transform 8%)

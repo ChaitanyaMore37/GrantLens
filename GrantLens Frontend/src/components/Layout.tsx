@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
 import {
   Landmark,
   LayoutDashboard,
@@ -30,6 +30,11 @@ const links = [
   ["/network", "Network Explorer", Waypoints],
   ["/investigations", "Investigations", FolderSearch],
   ["/reports", "Reports", FileBarChart2],
+  ["/review-queue", "Priority Review Queue", UsersRound],
+  ["/anomalies", "Transaction Anomalies", Waypoints],
+  ["/history", "Analysis History", FileBarChart2],
+  ["/audit-trail", "Audit Trail", FolderSearch],
+  ["/evaluation", "Detection Evaluation", FileBarChart2],
   ["/settings", "Settings", Settings2],
 ] as const;
 export function Layout() {
@@ -37,7 +42,15 @@ export function Layout() {
   const [dialog, setDialog] = useState("");
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-  const audits = useQuery({queryKey:["audits"],queryFn:api.getAudits,enabled:config.mode === "api"});
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  const audits = useQuery({
+    queryKey: ["audits"],
+    queryFn: api.getAudits,
+    enabled: config.mode === "api",
+  });
   return (
     <div className="application">
       <a className="skip-link" href="#main-content">
@@ -75,8 +88,8 @@ export function Layout() {
         <div>
           <span className="prototype-dot" />
           {config.mode === "mock"
-            ? "Prototype — Synthetic Data"
-            : "Prototype — Synthetic Data · API"}
+            ? "Prototype — Synthetic Scholarship Data"
+            : "Prototype — Synthetic Scholarship Data · API"}
           <button onClick={() => setDialog("User manual")}>
             User manual <ArrowUpRight size={12} />
           </button>
@@ -128,7 +141,7 @@ export function Layout() {
             </div>
             <div className="secure-note">
               <ShieldCheck size={15} />
-              Secure audit workspace
+              Local demo workspace
             </div>
           </div>
         </aside>
@@ -162,6 +175,14 @@ export function Layout() {
             </form>
             <div className="user-actions">
               <button
+                onClick={() => {
+                  sessionStorage.removeItem("grantlens.demo-session");
+                  window.location.assign("/login");
+                }}
+              >
+                Logout
+              </button>
+              <button
                 className="notification icon-button"
                 aria-label="Notifications"
                 onClick={() => setDialog("Notifications")}
@@ -184,7 +205,37 @@ export function Layout() {
             </div>
           </div>
           <main id="main-content" tabIndex={-1}>
-            {config.mode === "api" && <div className="filter-row"><label>Selected audit <select aria-label="Selected audit" value={selectedAudit() || audits.data?.find(j=>j.status==="COMPLETED")?.id || ""} onChange={e=>{selectAudit(e.target.value);window.location.assign("/");}}><option value="">Choose completed audit</option>{audits.data?.filter(j=>j.status==="COMPLETED").map(j=><option key={j.id} value={j.id}>{j.id}</option>)}</select></label>{audits.error && <span role="alert">{audits.error.message}</span>}</div>}
+            {config.mode === "api" && (
+              <div className="filter-row">
+                <label>
+                  Selected audit{" "}
+                  <select
+                    aria-label="Selected audit"
+                    value={
+                      selectedAudit() ||
+                      audits.data?.find((j) => j.status === "COMPLETED")?.id ||
+                      ""
+                    }
+                    onChange={(e) => {
+                      selectAudit(e.target.value);
+                      window.location.assign("/");
+                    }}
+                  >
+                    <option value="">Choose completed audit</option>
+                    {audits.data
+                      ?.filter((j) => j.status === "COMPLETED")
+                      .map((j) => (
+                        <option key={j.id} value={j.id}>
+                          {j.id}
+                        </option>
+                      ))}
+                  </select>
+                </label>
+                {audits.error && (
+                  <span role="alert">{audits.error.message}</span>
+                )}
+              </div>
+            )}
             <Outlet />
           </main>
           <footer>
@@ -212,11 +263,11 @@ export function Layout() {
                 <button
                   className="primary"
                   onClick={() => {
-                    navigate("/clusters/CL-017");
+                    navigate("/review-queue");
                     setDialog("");
                   }}
                 >
-                  Review CL-017
+                  Open priority queue
                 </button>
               </>
             ) : dialog === "Auditor profile" ? (
@@ -225,7 +276,8 @@ export function Layout() {
                 <h3>Arjun Mehta</h3>
                 <p>Fictional Senior Audit Officer · Maharashtra region</p>
                 <p>
-                  This demonstration has no authentication or real user account.
+                  Frontend demo session only; API endpoints are not
+                  authenticated.
                 </p>
               </>
             ) : (
@@ -236,15 +288,15 @@ export function Layout() {
                     Explore Overview for audit totals and risk indicators.
                   </li>
                   <li>
-                    Open Risk Clusters and select a detected case to examine the network.
+                    Open Risk Clusters and select a detected case to examine the
+                    network.
                   </li>
                   <li>
                     Select a node or relationship to inspect source evidence.
                   </li>
                   <li>Record findings and update the investigation status.</li>
                   <li>
-                    Use New Audit to validate sample CSVs and run an
-                    analysis.
+                    Use New Audit to validate sample CSVs and run an analysis.
                   </li>
                 </ol>
                 <p>

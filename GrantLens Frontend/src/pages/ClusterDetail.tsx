@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
@@ -37,17 +37,25 @@ export function ClusterDetail() {
   });
   const item = iq.data?.find((c) => c.clusterId === id);
   const [confirm, setConfirm] = useState<ReviewStatus | null>(null);
+  const [reviewer, setReviewer] = useState("");
+  const [priority, setPriority] = useState("Normal");
+  const [resolution, setResolution] = useState("");
   const [note, setNote] = useState("");
   const toast = useToast();
   const client = useQueryClient();
   const mutation = useMutation({
-    mutationFn: (patch: { status?: ReviewStatus; note?: string }) =>
-      api.updateInvestigation(item!.id, patch),
-    onSuccess: () => {
+    mutationFn: (patch: {
+      status?: ReviewStatus;
+      note?: string;
+      assigned_reviewer?: string;
+      priority?: string;
+      resolution?: string;
+    }) => api.updateInvestigation(item!.id, patch),
+    onSuccess: (_data, patch) => {
       client.invalidateQueries({ queryKey: ["cases"] });
       client.invalidateQueries({ queryKey: ["summary"] });
       setConfirm(null);
-      setNote("");
+      if (patch.note) setNote("");
       toast(
         config.mode === "mock"
           ? "Investigation updated in this demo session."
@@ -55,6 +63,13 @@ export function ClusterDetail() {
       );
     },
   });
+  useEffect(() => {
+    if (item) {
+      setReviewer(item.auditor);
+      setPriority(item.priority || "Normal");
+      setResolution(item.resolution || "");
+    }
+  }, [item?.id, item?.auditor, item?.priority, item?.resolution]);
   const c = q.data;
   return (
     <>
@@ -211,7 +226,8 @@ export function ClusterDetail() {
                 icon={<ShieldAlert size={18} />}
                 action={
                   <span className="muted small">
-                    Maximum member score, capped at 100 · contributions shown for that member
+                    Maximum member score, capped at 100 · contributions shown
+                    for that member
                   </span>
                 }
               >
@@ -237,6 +253,56 @@ export function ClusterDetail() {
                 action={item && <span className="muted small">{item.id}</span>}
               >
                 <div className="notes-body">
+                  <p>
+                    Demo assignment: {item?.auditor} ·{" "}
+                    {item?.priority || "Normal"}
+                  </p>
+                  <p>Resolution: {item?.resolution || "Not recorded"}</p>
+                  <label className="form-label">
+                    Assigned reviewer (demo)
+                    <input
+                      maxLength={100}
+                      value={reviewer}
+                      onChange={(e) => setReviewer(e.target.value)}
+                    />
+                  </label>
+                  <label className="form-label">
+                    Investigation priority
+                    <select
+                      value={priority}
+                      onChange={(e) => setPriority(e.target.value)}
+                    >
+                      {["Normal", "High", "Urgent"].map((v) => (
+                        <option key={v}>{v}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="form-label">
+                    Resolution summary
+                    <textarea
+                      maxLength={2000}
+                      value={resolution}
+                      onChange={(e) => setResolution(e.target.value)}
+                    />
+                  </label>
+                  <button
+                    disabled={mutation.isPending || !item}
+                    onClick={() =>
+                      mutation.mutate({
+                        assigned_reviewer: reviewer || item?.auditor,
+                        priority,
+                        resolution: resolution || item?.resolution,
+                      })
+                    }
+                  >
+                    Save review details
+                  </button>
+                  {item?.status === "CLEARED" && (
+                    <button onClick={() => setConfirm("IN_INVESTIGATION")}>
+                      Reopen investigation
+                    </button>
+                  )}
+
                   {item?.notes.length ? (
                     item.notes.map((n, i) => (
                       <article className="case-note" key={i}>

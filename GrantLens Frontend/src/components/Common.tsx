@@ -173,7 +173,7 @@ export function Select({
             key={typeof o === "string" ? o : o.value}
             value={typeof o === "string" ? o : o.value}
           >
-            {typeof o === "string" ? o : o.label}
+            {typeof o === "string" ? o || "All" : o.label}
           </option>
         ))}
       </select>

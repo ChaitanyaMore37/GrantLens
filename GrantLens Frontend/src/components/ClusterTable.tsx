@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, SlidersHorizontal } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
-import { api } from "../services/api";
+import { ServerClusterTable } from "./ServerClusterTable";
+import { api, config } from "../services/api";
 import { compactMoney, statuses } from "../utils";
 import {
   DataState,
@@ -14,7 +15,7 @@ import {
   StatusBadge,
 } from "./Common";
 import type { AuditFilters, Cluster } from "../types";
-export function ClusterTable({
+function LegacyClusterTable({
   compact = false,
   externalFilters = {},
 }: {
@@ -48,15 +49,17 @@ export function ClusterTable({
     cases.data?.find((c) => c.clusterId === id)?.status || "NEEDS_REVIEW";
   const rows = (q.data || [])
     .map((c) =>
-      (externalFilters.period === "q4" || !!externalFilters.scheme)
+      externalFilters.period === "q4" || !!externalFilters.scheme
         ? {
             ...c,
             amount: (transactions.data || [])
               .filter(
                 (t) =>
                   c.beneficiaryIds.includes(t.beneficiaryId || "") &&
-                  (!externalFilters.scheme || t.scheme === externalFilters.scheme) &&
-                  (externalFilters.period !== "q4" || (t.date >= "2024-10-01" && t.date < "2025-01-01")),
+                  (!externalFilters.scheme ||
+                    t.scheme === externalFilters.scheme) &&
+                  (externalFilters.period !== "q4" ||
+                    (t.date >= "2024-10-01" && t.date < "2025-01-01")),
               )
               .reduce((sum, t) => sum + t.amount, 0),
           }
@@ -71,7 +74,8 @@ export function ClusterTable({
         (!scheme || c.scheme.split(", ").includes(scheme)) &&
         (!externalFilters.district ||
           c.district === externalFilters.district) &&
-        (!externalFilters.scheme || c.scheme.split(", ").includes(externalFilters.scheme)) &&
+        (!externalFilters.scheme ||
+          c.scheme.split(", ").includes(externalFilters.scheme)) &&
         (!externalFilters.batch || c.batch === externalFilters.batch) &&
         (!status || statusOf(c.id) === status) &&
         c.score >= min &&
@@ -201,7 +205,8 @@ export function ClusterTable({
         loading={
           q.isPending ||
           cases.isPending ||
-          ((externalFilters.period === "q4" || !!externalFilters.scheme) && transactions.isPending)
+          ((externalFilters.period === "q4" || !!externalFilters.scheme) &&
+            transactions.isPending)
         }
         error={q.error || cases.error || transactions.error}
         retry={() => {
@@ -290,5 +295,16 @@ export function ClusterTable({
         </p>
       )}
     </>
+  );
+}
+
+export function ClusterTable(props: {
+  compact?: boolean;
+  externalFilters?: AuditFilters;
+}) {
+  return config.mode === "api" ? (
+    <ServerClusterTable {...props} />
+  ) : (
+    <LegacyClusterTable {...props} />
   );
 }

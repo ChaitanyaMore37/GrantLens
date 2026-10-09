@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import cytoscape, { type Core, type StylesheetJson } from "cytoscape";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   Maximize,
   RotateCcw,
@@ -112,6 +112,7 @@ export function GraphView({
   preview?: boolean;
   initialEntity?: string;
 }) {
+  const queryClient = useQueryClient();
   const container = useRef<HTMLDivElement>(null);
   const cy = useRef<Core | null>(null);
   const q = useQuery({
@@ -134,7 +135,12 @@ export function GraphView({
     queryFn: () => api.getTransactions(selection!.data.id),
     enabled: !!selection && selection.kind === "node" && !preview,
   });
-  const beneficiary = useQuery({queryKey:["beneficiary",selection?.data.id], queryFn:()=>api.getBeneficiaryById(selection!.data.id),enabled:selection?.kind === "node" && selection.data.type === "beneficiary"});
+  const beneficiary = useQuery({
+    queryKey: ["beneficiary", selection?.data.id],
+    queryFn: () => api.getBeneficiaryById(selection!.data.id),
+    enabled:
+      selection?.kind === "node" && selection.data.type === "beneficiary",
+  });
   useEffect(() => {
     if (!container.current || !q.data) return;
     setSelection(null);
@@ -142,7 +148,11 @@ export function GraphView({
       container: container.current,
       elements: [...q.data.nodes, ...q.data.edges],
       style: graphStyle,
-      layout: { name: q.data.nodes.every(n=>n.position) ? "preset" : "cose", animate:false, padding: preview ? 17 : 40 },
+      layout: {
+        name: q.data.nodes.every((n) => n.position) ? "preset" : "cose",
+        animate: false,
+        padding: preview ? 17 : 40,
+      },
       minZoom: 0.15,
       maxZoom: 3,
       boxSelectionEnabled: false,
@@ -217,6 +227,21 @@ export function GraphView({
       node.select();
       setSelection({ kind: "node", data: node.data() });
       cy.current?.animate({ center: { eles: node }, duration: 200 });
+    }
+  };
+  const expand = async () => {
+    if (selection?.kind !== "node") return;
+    setPathBusy(true);
+    try {
+      const g = await api.getGraphNeighbors(clusterId, selection.data.id, hops);
+      queryClient.setQueryData(["graph", clusterId], g);
+      toast(
+        `Loaded ${g.nodes.length} entities around selected node${g.truncated ? " (bounded)" : ""}.`,
+      );
+    } catch (e) {
+      toast((e as Error).message);
+    } finally {
+      setPathBusy(false);
     }
   };
   const showPath = async () => {
@@ -409,7 +434,10 @@ export function GraphView({
                         )?.position;
                         if (p) n.position(p);
                       });
-                      if (!q.data?.nodes.every(n=>n.position)) cy.current?.layout({name:"cose",animate:false}).run();
+                      if (!q.data?.nodes.every((n) => n.position))
+                        cy.current
+                          ?.layout({ name: "cose", animate: false })
+                          .run();
                       cy.current?.fit(undefined, 35);
                     }}
                   >
@@ -454,7 +482,20 @@ export function GraphView({
                   {selection.kind === "node" ? (
                     <>
                       <p>{selection.data.maskedInfo}</p>
-                      {beneficiary.data && selection.data.type === "beneficiary" && <><h4>Calculated risk: {beneficiary.data.score}/100</h4>{beneficiary.data.evidence?.map(e=><p key={e.id}>{e.label} (+{e.contribution}): {e.description}<small>{e.records.join(" · ")}</small></p>)}</>}
+                      {beneficiary.data &&
+                        selection.data.type === "beneficiary" && (
+                          <>
+                            <h4>
+                              Calculated risk: {beneficiary.data.score}/100
+                            </h4>
+                            {beneficiary.data.evidence?.map((e) => (
+                              <p key={e.id}>
+                                {e.label} (+{e.contribution}): {e.description}
+                                <small>{e.records.join(" · ")}</small>
+                              </p>
+                            ))}
+                          </>
+                        )}
                       <h4>Connected entities</h4>
                       <div className="connection-list">
                         {q.data?.edges
@@ -480,6 +521,13 @@ export function GraphView({
                           })}
                       </div>
                       <h4>Explore connection path</h4>
+                      <button disabled={pathBusy} onClick={expand}>
+                        Load selected neighborhood
+                      </button>
+                      <small>
+                        Replaces this view with a bounded neighborhood, up to
+                        500 nodes.
+                      </small>
                       <select
                         aria-label="Path target"
                         value={pathTarget}
@@ -561,7 +609,9 @@ export function GraphView({
         </div>
         {!preview && (
           <div className="graph-legend">
-            {q.data?.truncated && <strong>Bounded view: graph truncated to 500 nodes.</strong>}
+            {q.data?.truncated && (
+              <strong>Bounded view: graph truncated to 500 nodes.</strong>
+            )}
             {Object.entries(colors).map(([t, c]) => (
               <span key={t}>
                 <i style={{ background: c }} />

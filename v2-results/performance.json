@@ -1,0 +1,29 @@
+{
+  "dataset": "supplied stress, unchanged",
+  "beneficiaries": 50000,
+  "pipeline_seconds": 9.3453,
+  "process_and_persist_seconds": 19.01005100000475,
+  "query_measurements": {
+    "review-queue": {
+      "median_ms": 122.71789550140966,
+      "max_ms": 130.9342500026105,
+      "max_response_bytes": 38979,
+      "total": 50000
+    },
+    "clusters": {
+      "median_ms": 10.670000498066656,
+      "max_ms": 12.809457999537699,
+      "max_response_bytes": 131944,
+      "total": 853
+    },
+    "anomalies": {
+      "median_ms": 1.285562502744142,
+      "max_ms": 1.7410419968655333,
+      "max_response_bytes": 43471,
+      "total": 798
+    }
+  },
+  "peak_rss_bytes_macos": 2013151232,
+  "sqlite_bytes": 317878272,
+  "temporary_database": "/var/folders/29/9n2qbqwj10l6jpcdnnsj_4740000gn/T/grantlens-v2-benchmark-9v02s4py"
+}

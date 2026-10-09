@@ -1,0 +1,9 @@
+{
+  "audit_id": "595a9671-bd97-4770-850c-a37930759f82",
+  "report_id": "4b01a6ec-8ebb-448c-bd12-2798815ede66",
+  "csv_status": 200,
+  "content_type": "text/csv; charset=utf-8",
+  "csv_bytes": 4620,
+  "json_status": 200,
+  "case_count": 42
+}

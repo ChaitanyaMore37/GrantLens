@@ -8,3 +8,5 @@ class ResizeObserverStub {
   disconnect() {}
 }
 globalThis.ResizeObserver = ResizeObserverStub;
+// jsdom has no scroll viewport; navigation scroll behavior is browser-tested.
+window.scrollTo = () => {};

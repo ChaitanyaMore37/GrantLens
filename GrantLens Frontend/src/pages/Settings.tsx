@@ -1,3 +1,7 @@
+import { useQuery } from "@tanstack/react-query";
+import { v2 } from "../services/v2";
+import { api, selectedAudit, selectAudit } from "../services/api";
+import { DataState } from "../components/Common";
 import { useState } from "react";
 import { Database, Monitor, ShieldCheck } from "lucide-react";
 import { config } from "../services/api";
@@ -10,12 +14,85 @@ export function Settings() {
     localStorage.getItem("grantlens-motion") === "true",
   );
   const toast = useToast();
+  const health = useQuery({
+    queryKey: ["health"],
+    queryFn: v2.health,
+    enabled: config.mode === "api",
+  });
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const [dataset, setDataset] = useState("sample");
+  async function initialize() {
+    setBusy(true);
+    setError("");
+    try {
+      const a = await v2.initialize(dataset);
+      if (a.status === "Ready" || a.status === "Failed")
+        await api.runAudit(a.audit_id);
+      let status = await api.getAudit(a.audit_id);
+      while (status.status === "PROCESSING") {
+        await new Promise((r) => setTimeout(r, 1000));
+        status = await api.getAudit(a.audit_id);
+      }
+      if (status.status !== "COMPLETED") throw new Error(status.stage);
+      selectAudit(a.audit_id);
+      window.location.assign("/");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Initialization failed");
+    } finally {
+      setBusy(false);
+    }
+  }
+
   return (
     <>
       <PageHeading
         title="Workspace Settings"
         description="Connection details, display preferences, and review-priority guidance."
       />
+      <Panel title="System diagnostics and supplied datasets">
+        <div className="settings-body">
+          <DataState
+            loading={health.isPending && config.mode === "api"}
+            error={health.error}
+            retry={() => health.refetch()}
+          >
+            <p>
+              API / database:{" "}
+              {health.data?.status || "Not checked in mock mode"} · version{" "}
+              {health.data?.version || "—"}
+            </p>
+          </DataState>
+          <p>
+            Active audit: {selectedAudit() || "None selected"} · Supported
+            input: CSV with optional reference tables.
+          </p>
+          <p>
+            Initialize an existing supplied dataset without changing source
+            files. Repeated initialization reuses the same audit.
+          </p>
+          <label>
+            Dataset{" "}
+            <select
+              value={dataset}
+              onChange={(e) => setDataset(e.target.value)}
+            >
+              <option value="sample">Sample · 1,000 beneficiaries</option>
+              <option value="main">Main · 10,000 beneficiaries</option>
+            </select>
+          </label>
+          <button disabled={busy || config.mode !== "api"} onClick={initialize}>
+            {busy
+              ? "Waiting for real analysis completion…"
+              : "Initialize supplied dataset"}
+          </button>
+          {error && <p role="alert">{error}</p>}
+          <p>
+            If disconnected, start FastAPI on the configured port and retry. No
+            mock fallback is used.
+          </p>
+        </div>
+      </Panel>
       <div className="settings-grid">
         <Panel title="Data connection" icon={<Database size={18} />}>
           <div className="settings-body">
@@ -39,7 +116,8 @@ export function Settings() {
             </dl>
             <div className="info-banner">
               Change VITE_DATA_SOURCE and VITE_API_BASE_URL in your local .env
-              file, then restart Vite. API mode is the default; mock mode is for isolated UI development.
+              file, then restart Vite. API mode is the default; mock mode is for
+              isolated UI development.
             </div>
           </div>
         </Panel>
@@ -119,15 +197,15 @@ export function Settings() {
         </Panel>
         <Panel title="About this prototype">
           <div className="settings-body">
-            <h3>GrantLens · Version 1.0</h3>
+            <h3>GrantLens · Version 2.0</h3>
             <p>
               A scholarship forensic intelligence demonstration for financial
               auditors. All people, institutions, identities, and results are
               synthetic.
             </p>
             <p>
-              This project has no government affiliation. Demo decisions and
-              uploaded file summaries reset on a full page reload.
+              This project has no government affiliation. API audit results and
+              reviewer decisions persist in local SQLite across refreshes.
             </p>
           </div>
         </Panel>

@@ -1,0 +1,16 @@
+src/pages/Intelligence.tsx 56ms
+src/pages/Login.tsx 5ms
+src/pages/ClusterDetail.tsx 11ms
+src/pages/NewAudit.tsx 21ms
+src/pages/Reports.tsx 13ms
+src/pages/Settings.tsx 6ms
+src/components/ServerClusterTable.tsx 11ms
+src/components/Layout.tsx 11ms
+src/components/GraphView.tsx 27ms
+src/components/ClusterTable.tsx 9ms
+src/components/Common.tsx 9ms
+src/services/api.ts 39ms
+src/services/v2.ts 8ms
+src/App.tsx 3ms
+src/types/index.ts 4ms
+tests/v2.test.tsx 6ms

@@ -55,6 +55,8 @@ export interface Cluster {
   batch: string;
 }
 export interface InvestigationCase {
+  priority?: string;
+  resolution?: string;
   score?: number;
   id: string;
   clusterId: string;
@@ -98,6 +100,7 @@ export interface GraphResponse {
   edges: GraphEdge[];
 }
 export interface AuditJob {
+  validation?: unknown;
   id: string;
   name: string;
   status: "READY" | "PROCESSING" | "COMPLETED" | "FAILED";
@@ -118,6 +121,7 @@ export interface AuditSummary {
   anomalies: { name: string; value: number }[];
 }
 export interface DatasetFile {
+  mapping?: Record<string, string>;
   name: string;
   rows: number;
   file: File;

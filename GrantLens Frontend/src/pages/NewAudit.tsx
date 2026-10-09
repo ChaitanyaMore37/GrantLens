@@ -1,3 +1,4 @@
+import Papa from "papaparse";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
@@ -11,11 +12,15 @@ import {
   LoaderCircle,
   Download,
 } from "lucide-react";
-import { api, config, selectAudit } from "../services/api";
+import { api, config, selectAudit, ApiError } from "../services/api";
 import type { AuditJob, DatasetFile } from "../types";
 import { PageHeading, Panel, useToast } from "../components/Common";
 import { schemas, validateCsv } from "../utils";
-type Preview = DatasetFile & { errors: string[] };
+type Preview = DatasetFile & {
+  errors: string[];
+  sourceText: string;
+  sourceColumns: string[];
+};
 const stages = [
   "Data Validation",
   "Normalization",
@@ -28,6 +33,7 @@ export function NewAudit() {
   const [files, setFiles] = useState<Record<string, Preview>>({});
   const [step, setStep] = useState(1);
   const [error, setError] = useState("");
+  const [validation, setValidation] = useState<unknown>(null);
   const [busy, setBusy] = useState(false);
   const [job, setJob] = useState<AuditJob | null>(null);
   const [references, setReferences] = useState<DatasetFile[]>([]);
@@ -40,6 +46,8 @@ export function NewAudit() {
   const add = async (name: string, file: File | undefined) => {
     if (!file) return;
     setError("");
+    setJob(null);
+    setValidation(null);
     if (!file.name.toLowerCase().endsWith(".csv")) {
       setError("Please select a CSV file.");
       return;
@@ -51,10 +59,49 @@ export function NewAudit() {
     try {
       const text = await file.text();
       const result = validateCsv(text, name);
-      setFiles((old) => ({ ...old, [name]: { ...result, name, file } }));
+      setFiles((old) => ({
+        ...old,
+        [name]: {
+          ...result,
+          name,
+          file,
+          sourceText: text,
+          sourceColumns: result.columns,
+        },
+      }));
     } catch {
       setError("Unable to read this file. Please choose it again.");
     }
+  };
+  const mapColumn = (name: string, canonical: string, source: string) => {
+    setJob(null);
+    setValidation(null);
+    setFiles((old) => {
+      const file = old[name];
+      const mapping = { ...file.mapping };
+      if (source) mapping[canonical] = source;
+      else delete mapping[canonical];
+      const rows = Papa.parse<string[]>(file.sourceText, {
+        skipEmptyLines: true,
+      }).data;
+      const inverse = Object.fromEntries(
+        Object.entries(mapping).map(([c, s]) => [s, c]),
+      );
+      const headers = rows[0].map((h) => inverse[h] || h);
+      const result = validateCsv(
+        Papa.unparse([headers, ...rows.slice(1)]),
+        name,
+      );
+      if (
+        new Set(Object.values(mapping)).size !==
+          Object.values(mapping).length ||
+        new Set(headers).size !== headers.length
+      )
+        result.errors.push(
+          "Ambiguous mapping: each source and canonical column must be unique.",
+        );
+      return { ...old, [name]: { ...file, ...result, mapping } };
+    });
   };
   useEffect(() => {
     if (job?.status !== "PROCESSING") return;
@@ -67,11 +114,30 @@ export function NewAudit() {
     }, 800);
     return () => clearTimeout(timer);
   }, [job]);
+  const validateServer = async () => {
+    setBusy(true);
+    setError("");
+    try {
+      const uploaded = await api.uploadAuditFiles([
+        ...Object.values(files),
+        ...references,
+      ]);
+      setJob(uploaded);
+      setValidation(uploaded.validation);
+    } catch (e) {
+      setError((e as Error).message);
+      if (e instanceof ApiError) setValidation(e.details);
+    } finally {
+      setBusy(false);
+    }
+  };
   const run = async () => {
     setBusy(true);
     setError("");
     try {
-      const uploaded = await api.uploadAuditFiles([...Object.values(files), ...references]);
+      const uploaded =
+        job ||
+        (await api.uploadAuditFiles([...Object.values(files), ...references]));
       const started = await api.runAudit(uploaded.id, fail);
       setJob(started);
       setStep(3);
@@ -133,7 +199,51 @@ export function NewAudit() {
               never sent to a backend.
             </span>
           </div>
-          {config.mode === "api" && <div className="info-banner"><label>Reference CSVs (select all four from main/reference)<input aria-label="Reference CSV files" type="file" multiple accept=".csv" onChange={e=>{const fs=Array.from(e.target.files || []); const expected=["institutions.csv","accounts.csv","scheme_rules.csv","account_authorizations.csv"]; if(fs.length && (fs.length!==4 || !expected.every(n=>fs.some(f=>f.name===n)))) {setError("Select all four reference CSVs together.");setReferences([]);return;} setError("");setReferences(fs.map(file=>({name:file.name,file,rows:0,columns:[]})));}} /></label><span>Ordinary references only. Never upload evaluation labels.</span></div>}
+          {config.mode === "api" && (
+            <div className="info-banner">
+              <label>
+                Reference CSVs (select all four from main/reference)
+                <input
+                  aria-label="Reference CSV files"
+                  type="file"
+                  multiple
+                  accept=".csv"
+                  onChange={(e) => {
+                    const fs = Array.from(e.target.files || []);
+                    const expected = [
+                      "institutions.csv",
+                      "accounts.csv",
+                      "scheme_rules.csv",
+                      "account_authorizations.csv",
+                    ];
+                    if (
+                      fs.length &&
+                      (fs.length !== 4 ||
+                        !expected.every((n) => fs.some((f) => f.name === n)))
+                    ) {
+                      setError("Select all four reference CSVs together.");
+                      setReferences([]);
+                      return;
+                    }
+                    setError("");
+                    setJob(null);
+                    setValidation(null);
+                    setReferences(
+                      fs.map((file) => ({
+                        name: file.name,
+                        file,
+                        rows: 0,
+                        columns: [],
+                      })),
+                    );
+                  }}
+                />
+              </label>
+              <span>
+                Ordinary references only. Never upload evaluation labels.
+              </span>
+            </div>
+          )}
           <div className="upload-grid">
             {names.map((name) => (
               <div
@@ -162,6 +272,8 @@ export function NewAudit() {
                         setFiles((old) => {
                           const next = { ...old };
                           delete next[name];
+                          setJob(null);
+                          setValidation(null);
                           return next;
                         })
                       }
@@ -184,7 +296,15 @@ export function NewAudit() {
                     </label>
                   </>
                 )}
-                <a className="sample-link" href={config.mode === "mock" ? `/samples/${name}` : `${config.baseUrl}/dataset/sample/${name}`} download>
+                <a
+                  className="sample-link"
+                  href={
+                    config.mode === "mock"
+                      ? `/samples/${name}`
+                      : `${config.baseUrl}/dataset/sample/${name}`
+                  }
+                  download
+                >
                   <Download size={13} />
                   Download sample
                 </a>
@@ -211,9 +331,25 @@ export function NewAudit() {
           action={<span className="demo-pill">SCHEMA PREVIEW ONLY</span>}
         >
           <div className="validation-body">
+            {validation != null && (
+              <section>
+                <h3>Backend validation findings</h3>
+                <pre
+                  style={{
+                    whiteSpace: "pre-wrap",
+                    maxHeight: 360,
+                    overflow: "auto",
+                  }}
+                >
+                  {JSON.stringify(validation, null, 2)}
+                </pre>
+              </section>
+            )}
             <p>
-              Column mapping uses the exact headers below. Missing or invalid
-              values must be corrected before continuing.
+              Explicit column mappings rename headers only. Original uploaded
+              bytes are preserved on the backend when a mapping is used. Values
+              and row order remain unchanged; resolve ambiguous mappings before
+              validation.
             </p>
             {names.map((n) => (
               <section className="validation-file" key={n}>
@@ -233,6 +369,29 @@ export function NewAudit() {
                     </span>
                   )}
                 </div>
+                {config.mode === "api" && (
+                  <details>
+                    <summary>Review / change column mapping</summary>
+                    {schemas[n].map((c) => (
+                      <label className="form-label" key={c}>
+                        {c}
+                        <select
+                          aria-label={`${n} mapping ${c}`}
+                          value={
+                            files[n]?.mapping?.[c] ||
+                            (files[n]?.sourceColumns.includes(c) ? c : "")
+                          }
+                          onChange={(e) => mapColumn(n, c, e.target.value)}
+                        >
+                          <option value="">Unmapped</option>
+                          {files[n]?.sourceColumns.map((col) => (
+                            <option key={col}>{col}</option>
+                          ))}
+                        </select>
+                      </label>
+                    ))}
+                  </details>
+                )}
                 <div className="column-map">
                   {schemas[n].map((c) => (
                     <span
@@ -278,7 +437,21 @@ export function NewAudit() {
           </div>
           <div className="panel-footer">
             <button onClick={() => setStep(1)}>Back to files</button>
-            <button className="primary" disabled={!valid || busy} onClick={run}>
+            {config.mode === "api" && (
+              <button disabled={!valid || busy} onClick={validateServer}>
+                Validate on server
+              </button>
+            )}
+            <button
+              className="primary"
+              disabled={
+                !valid ||
+                busy ||
+                (config.mode === "api" &&
+                  !["READY", "FAILED"].includes(job?.status || ""))
+              }
+              onClick={run}
+            >
               {busy ? <LoaderCircle size={16} /> : null}
               {config.mode === "mock" ? "Run demo analysis" : "Run analysis"}
               <ArrowRight size={16} />
@@ -290,7 +463,9 @@ export function NewAudit() {
         <Panel
           title={
             job.status === "COMPLETED"
-              ? (config.mode === "mock" ? "Demo audit complete" : "Audit complete")
+              ? config.mode === "mock"
+                ? "Demo audit complete"
+                : "Audit complete"
               : job.status === "FAILED"
                 ? "Analysis could not complete"
                 : "Processing audit workflow"
@@ -321,7 +496,11 @@ export function NewAudit() {
             <div className="progress-track">
               <div style={{ width: `${job.progress}%` }} />
             </div>
-            <span className="muted">{config.mode === "api" && job.status === "PROCESSING" ? "Processing; percentage unavailable" : `${job.progress}% complete`}</span>
+            <span className="muted">
+              {config.mode === "api" && job.status === "PROCESSING"
+                ? "Processing; percentage unavailable"
+                : `${job.progress}% complete`}
+            </span>
             <div className="processing-stages" hidden={config.mode === "api"}>
               {stages.map((s, i) => (
                 <div className={job.progress > i * 17 ? "done" : ""} key={s}>
@@ -341,11 +520,19 @@ export function NewAudit() {
                   ))}
                 </div>
                 <p>
-                  {config.mode === "mock" ? "Results use the reference demo fixture." : "Results belong to your uploaded dataset."}
+                  {config.mode === "mock"
+                    ? "Results use the reference demo fixture."
+                    : "Results belong to your uploaded dataset."}
                 </p>
                 <button
                   className="primary"
-                  onClick={() => { if(config.mode === "mock") navigate("/clusters/CL-017"); else { selectAudit(job.id); window.location.assign("/"); } }}
+                  onClick={() => {
+                    if (config.mode === "mock") navigate("/clusters/CL-017");
+                    else {
+                      selectAudit(job.id);
+                      window.location.assign("/");
+                    }
+                  }}
                 >
                   View results <ArrowRight size={16} />
                 </button>
@@ -353,10 +540,7 @@ export function NewAudit() {
             )}
             {(job.status === "FAILED" || error) && (
               <>
-                <p role="alert">
-                  {error ||
-                    job.stage}
-                </p>
+                <p role="alert">{error || job.stage}</p>
                 <button
                   onClick={() => {
                     setStep(2);

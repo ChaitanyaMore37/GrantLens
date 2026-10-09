@@ -2,7 +2,14 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { Printer, Landmark, ShieldAlert } from "lucide-react";
-import { api, config, selectedAudit, selectAudit } from "../services/api";
+import {
+  api,
+  config,
+  selectedAudit,
+  selectAudit,
+  scoped,
+  reportCsvUrl,
+} from "../services/api";
 import {
   DataState,
   PageHeading,
@@ -11,7 +18,86 @@ import {
   Select,
   StatusBadge,
 } from "../components/Common";
-import { money } from "../utils";
+import { money, download } from "../utils";
+function ReportArchive() {
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [page, setPage] = useState(1);
+  const q = useQuery({
+    queryKey: ["reports", selectedAudit(), page],
+    queryFn: () =>
+      scoped<{
+        items: { report_id: string; generated_at: string }[];
+        total: number;
+      }>("/reports", { offset: (page - 1) * 25, limit: 25 }),
+  });
+  async function exportReport(id: string) {
+    setError("");
+    try {
+      const report = await scoped<Record<string, unknown>>("/reports/" + id);
+      download(id + ".json", JSON.stringify(report, null, 2));
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
+
+  return (
+    <Panel title="Persisted report archive">
+      <div className="settings-body">
+        <p>
+          Generate a snapshot with audit provenance, validation findings, real
+          evidence, case notes and methodology. JSON includes full evidence; CSV
+          contains the case register.
+        </p>
+        <button
+          className="primary"
+          disabled={busy}
+          onClick={async () => {
+            setBusy(true);
+            setError("");
+            try {
+              await scoped("/reports", {}, { method: "POST" });
+              await q.refetch();
+            } catch (e) {
+              setError((e as Error).message);
+            } finally {
+              setBusy(false);
+            }
+          }}
+        >
+          Generate and archive report
+        </button>
+        {error && <p role="alert">{error}</p>}
+        <DataState
+          loading={q.isPending}
+          error={q.error}
+          retry={() => q.refetch()}
+        >
+          {q.data?.items.map((r) => (
+            <p key={r.report_id}>
+              {r.report_id} · {new Date(r.generated_at).toLocaleString()}{" "}
+              <button onClick={() => exportReport(r.report_id)}>
+                Download JSON
+              </button>{" "}
+              <a className="button" href={reportCsvUrl(r.report_id)} download>
+                Download CSV
+              </a>
+            </p>
+          ))}
+        </DataState>
+        <button disabled={page === 1} onClick={() => setPage(page - 1)}>
+          Previous reports
+        </button>
+        <button
+          disabled={page * 25 >= (q.data?.total || 0)}
+          onClick={() => setPage(page + 1)}
+        >
+          Next reports
+        </button>
+      </div>
+    </Panel>
+  );
+}
 export function Reports() {
   const jobs = useQuery({ queryKey: ["audits"], queryFn: api.getAudits });
   const summary = useQuery({
@@ -26,7 +112,9 @@ export function Reports() {
     queryKey: ["cases"],
     queryFn: api.getInvestigations,
   });
-  const [selected, setSelected] = useState(config.mode === "mock" ? "AUD-2024-012" : selectedAudit());
+  const [selected, setSelected] = useState(
+    config.mode === "mock" ? "AUD-2024-012" : selectedAudit(),
+  );
   const job = jobs.data?.find((j) => j.id === (selected || selectedAudit()));
   const s = summary.data;
   return (
@@ -49,17 +137,26 @@ export function Reports() {
           <Select
             label="Audit job"
             value={selected}
-            onChange={id=>{if(config.mode === "mock") setSelected(id);else {selectAudit(id);window.location.assign("/reports");}}}
-            options={(jobs.data || []).filter(j=>j.status === "COMPLETED").map((j) => ({
-              value: j.id,
-              label: `${j.id} · ${j.status}`,
-            }))}
+            onChange={(id) => {
+              if (config.mode === "mock") setSelected(id);
+              else {
+                selectAudit(id);
+                window.location.assign("/reports");
+              }
+            }}
+            options={(jobs.data || [])
+              .filter((j) => j.status === "COMPLETED")
+              .map((j) => ({
+                value: j.id,
+                label: `${j.id} · ${j.status}`,
+              }))}
           />
           <span className="muted small">
             Use your browser’s print dialog to save the report as PDF.
           </span>
         </div>
       </div>
+      {config.mode === "api" && <ReportArchive />}
       <DataState
         loading={
           jobs.isPending ||
@@ -91,6 +188,7 @@ export function Reports() {
             </p>
             <div className="report-meta">
               <span>
+                Generated <strong>{new Date().toLocaleString()}</strong>
                 Audit reference<strong>{job.id}</strong>
               </span>
               <span>

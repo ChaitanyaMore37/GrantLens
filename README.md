@@ -1,10 +1,10 @@
-# GrantLens integrated local application
+# GrantLens V2 integrated local application
 
 The existing React frontend, FastAPI engine and synthetic dataset remain in their original separate directories. API mode is now the frontend default. No supplied dataset or ground-truth file was regenerated or changed.
 
 ## Install and start
 
-Requirements: Python 3.11+ and Node 22.12+. Tested here with Python 3.13 and Node 26. The application is a local synthetic-data prototype, with no authentication or government affiliation.
+Requirements: Python 3.11+ and Node 22.12+. Tested here with Python 3.13 and Node 26. The application is a local synthetic-data prototype, with frontend-only demo login and no API authentication or government affiliation.
 
 Backend terminal, from this parent workspace:
 
@@ -29,10 +29,10 @@ Open [GrantLens](http://127.0.0.1:5173) and [FastAPI documentation](http://127.0
 
 ## Use the supplied dataset
 
-1. Open **New Audit**. Start with `Synthetic Scholarship Dataset/grantlens-dataset/data/sample/main/` (1,000 beneficiaries).
+1. Sign in with `auditor@grantlens.demo` / `GrantLens123` (demo credentials). Open **New Audit**. Start with `Synthetic Scholarship Dataset/grantlens-dataset/data/sample/main/` (1,000 beneficiaries).
 2. Choose `beneficiaries.csv`, `applications.csv`, and `transactions.csv` in their respective controls.
 3. In **Reference CSV files**, select all four files from that same dataset's `main/reference/`: institutions, accounts, scheme rules, account authorizations.
-4. Validate the schema preview, then **Run analysis**. The backend validates relationships and runs the actual engine. **View results** selects that completed audit.
+4. Review the schema preview and explicit header mappings, click **Validate on server**, inspect backend findings, then **Run analysis**. The backend validates relationships and runs the actual engine. **View results** selects that completed audit.
 5. Open Risk Clusters, select a computed `CLU-*` case, inspect beneficiary/account nodes, save notes or change review status, and open Reports.
 6. Repeat with `data/main/` for the 10,000-beneficiary dataset. The global audit selector and Reports selector retain explicit audit scope; switching reloads the view to prevent stale results.
 
@@ -76,3 +76,16 @@ For isolated UI development only, set `VITE_DATA_SOURCE=mock` in the frontend `.
 - **Missing CL-017 route:** supplied CL-017 is an offline evaluation label. The engine independently discovered `CLU-af7bca6c2c32` in the main dataset (16 members, ₹8,20,000). The UI uses computed IDs and does not feed evaluation labels into detection.
 
 See `INTEGRATION_REPORT.md`, `FEATURE_GAP_REPORT.md`, and `TEST_REPORT.md` for implementation details and measured limitations.
+
+
+## V2 auditor workflow
+
+Settings → Initialize supplied dataset can create/reuse a sample or main audit without generating data. For independent uploads use New Audit. Analysis History preserves separate runs and offers Ready/Failed job retries. The selected audit scopes the priority queue, clusters, anomalies, cases, graphs, events and reports.
+
+Priority Review Queue and the beneficiary directory use server pagination and compound filters. Open a beneficiary for source references, applications, account transactions, identity candidates, evidence and related case/graph links. Transaction Anomalies includes zero-contribution contextual cycles as well as review findings. Investigation assignment and verification actions are demo-only, internal workflow changes. Reports → Generate and archive report persists a JSON snapshot; download its JSON or CSV case register. Browser print is an unsigned local output.
+
+Detection Evaluation shows recorded offline synthetic results. On the 10,000-record regression set, V2 reduced 2,074 false positives to zero with 99.36% recall; seven positives remain missed. This does not establish real-world accuracy. The legacy backend collector fixture loses four low-proportion records. See DETECTION_EVALUATION_REPORT.md.
+
+V2 adds tables/indexes automatically at startup without replacing existing audits. Old V1 results remain unchanged; initialize a new supplied audit or deliberately rerun through the API for V2 materialized metadata. Use a single backend worker. Interrupted jobs are marked Failed and can be retried; there is no durable queue or cancellation. Optional XLSX/PDF/OCR ingestion is not implemented.
+
+Upgrade details: UPGRADE_REPORT.md, FEATURE_PARITY_MATRIX.md, API_CONTRACT.md, DETECTION_EVALUATION_REPORT.md, PERFORMANCE_REPORT.md and TEST_REPORT.md. Executed test/evaluation evidence is in v2-results/. The original integration reports remain historical baselines.

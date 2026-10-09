@@ -43,6 +43,8 @@ def ingest(directory):
             raise ValidationError({'rejected_rows':[], 'errors':[f'{table}: missing columns {missing}'], 'warnings':[]})
         if len(frame) > 250000:
             raise ValidationError({'errors':[f'{table}: maximum 250000 rows'], 'rejected_rows':[], 'warnings':[]})
+        extra=sorted(set(frame.columns)-set(fields))
+        if extra: warnings.append(f'{table}.csv: unsupported columns retained in source but ignored: {extra}')
         rows, seen = [], set()
         for index, raw in enumerate(frame[fields].to_dict('records'), 2):
             row = {k:v.strip() for k,v in raw.items()}
@@ -86,6 +88,8 @@ def ingest(directory):
             if errors:
                 rejected.append({'table':table, 'row':index, 'record_id':pk, 'errors':errors, 'original':raw})
             else:
+                row['source_file']=file.name
+                row['source_row']=index
                 row['original'] = raw
                 rows.append(row)
         tables[table] = rows
@@ -122,7 +126,16 @@ def ingest(directory):
                 for col, target in cols.items():
                     if row[col] not in targets[target]:
                         rejected.append({'table':table,'record_id':row[FIELDS[table][0]],'errors':[f'Unknown reference {col}']})
+        for rule in references.get('scheme_rules',[]):
+            try:
+                if rule.get('minimum_amount') and (not 0<=float(rule['minimum_amount'])<=float(rule.get('maximum_amount','nan'))): raise ValueError()
+            except (ValueError,TypeError): rejected.append({'table':'scheme_rules','record_id':rule['scheme_id'],'errors':['Invalid minimum/maximum amount rule']})
         for row in references.get('account_authorizations',[]):
+            try:
+                date=pd.Timestamp(row['authorization_date'])
+                if pd.isna(date): raise ValueError()
+                row['authorization_date']=date.date().isoformat()
+            except (ValueError,TypeError): rejected.append({'table':'account_authorizations','record_id':row['beneficiary_id'],'errors':['Invalid authorization date']})
             if row['beneficiary_id'] not in beneficiaries or row['bank_account_id'] not in targets['accounts']:
                 rejected.append({'table':'account_authorizations','errors':['Unknown beneficiary or account']})
     else:
@@ -136,6 +149,10 @@ def ingest(directory):
         a = applications.get(row['application_id'])
         if row['transaction_type']=='DISBURSEMENT' and a and (a['application_status'] not in ['Approved','Paid'] or beneficiaries.get(a['beneficiary_id'],{}).get('bank_account_id') != row['receiver_account']):
             rejected.append({'table':'transactions','record_id':row['transaction_id'],'errors':['Disbursement must reference approved application and its beneficiary payout account']})
+    for error in rejected:
+        table=error.get('table'); error['source_file']=str(table)+'.csv'
+        match=next((r for r in tables.get(table,[]) if r.get(FIELDS.get(table,[''])[0])==error.get('record_id')),None)
+        if match: error.setdefault('row',match['source_row'])
     report = {'rejected_rows':rejected, 'warnings':warnings, 'errors':[], 'accepted_counts':{k:len(v) for k,v in tables.items()}}
     if rejected:
         raise ValidationError(report)
